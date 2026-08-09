@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt – Trimborn &amp; Segler Immobilien</title>
+<meta name="description" content="Sprechen Sie mit uns. Termine sind flexibel und auch kurzfristig möglich. Wir antworten in der Regel innerhalb von 24 Stunden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo_transparent.png" alt="Trimborn & Segler Immobilien">
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="immobilien.html">Immobilien</a>
+      <a href="bewertung.html">Bewertung</a>
+      <a href="tippgeber.html">Tippgeber</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="lang-switch">🌐 DE</a>
+      <a href="bewertung.html" class="btn btn-gold"><span class="full">Kostenlose</span>&nbsp;Bewertung</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="index.html">Startseite</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="immobilien.html">Immobilien</a>
+    <a href="bewertung.html">Bewertung</a>
+    <a href="tippgeber.html">Tippgeber</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="kontakt.html" class="active">Kontakt</a>
+    <a href="bewertung.html" class="btn btn-gold">Kostenlose Bewertung</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Kontakt</span>
+      <h1 style="font-size: clamp(32px,4vw,52px);">Sprechen Sie<br><span class="accent">mit uns.</span></h1>
+      <p class="lead">Termine sind flexibel und auch kurzfristig möglich. Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT GRID ===== -->
+  <section class="section-cream">
+    <div class="wrap">
+      <div class="split" style="align-items:flex-start;">
+
+        <!-- LEFT: contact info -->
+        <div>
+          <h2 class="section-title" style="font-size:24px;">So erreichen Sie uns</h2>
+
+          <div style="margin-top:24px;">
+            <div class="footer-contact-item" style="color:var(--ink);">
+              <span class="ico" style="color:var(--gold);">📍</span>
+              <div>
+                <strong>Standort</strong><br>
+                <span class="muted">Wuppertal, Nordrhein-Westfalen</span><br>
+                <span class="muted">Tätig in ganz NRW</span>
+              </div>
+            </div>
+            <div class="footer-contact-item" style="color:var(--ink);">
+              <span class="ico" style="color:var(--gold);">✉</span>
+              <div>
+                <strong>E-Mail</strong><br>
+                <a href="mailto:info@trimborn-segler.de" style="color:var(--gold);">info@trimborn-segler.de</a>
+              </div>
+            </div>
+            <div class="footer-contact-item" style="color:var(--ink);">
+              <span class="ico" style="color:var(--gold);">📞</span>
+              <div>
+                <strong>Telefon</strong><br>
+                <span class="muted">Auf Anfrage</span>
+              </div>
+            </div>
+            <div class="footer-contact-item" style="color:var(--ink);">
+              <span class="ico" style="color:var(--gold);">⏱</span>
+              <div>
+                <strong>Reaktionszeit</strong><br>
+                <span class="muted">In der Regel innerhalb von 24 Stunden</span><br>
+                <span class="muted">Termine auch kurzfristig möglich</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-panel" style="margin-top:30px;">
+            <h3 style="margin-bottom:10px;">Rückruf anfordern</h3>
+            <p style="font-size:13.5px; color:var(--muted-light); margin-bottom:18px;">Hinterlassen Sie Ihre Nummer – wir rufen Sie zurück, wann es Ihnen passt.</p>
+            <a href="#kontaktformular" class="btn btn-gold">Rückruf anfragen</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div class="form-card" id="kontaktformular">
+          <h3>Nachricht senden</h3>
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="c-name">Name *</label>
+                <input type="text" id="c-name" placeholder="Ihr vollständiger Name" required>
+              </div>
+              <div class="field">
+                <label for="c-email">E-Mail *</label>
+                <input type="email" id="c-email" placeholder="ihre@email.de" required>
+              </div>
+              <div class="field">
+                <label for="c-telefon">Telefon (optional)</label>
+                <input type="tel" id="c-telefon" placeholder="+49 …">
+              </div>
+              <div class="field">
+                <label for="c-ich-bin">Ich bin *</label>
+                <select id="c-ich-bin" required>
+                  <option value="">Bitte wählen…</option>
+                  <option>Verkäufer / Eigentümer</option>
+                  <option>Kaufinteressent</option>
+                  <option>Tippgeber</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="c-nachricht">Nachricht *</label>
+                <textarea id="c-nachricht" placeholder="Wie können wir Ihnen helfen?" required></textarea>
+              </div>
+            </div>
+
+            <div class="checkbox-row" style="margin-top:22px;">
+              <input type="checkbox" id="c-human" required>
+              <label for="c-human">Ich bin ein Mensch und kein automatisiertes Programm. *</label>
+            </div>
+            <div class="checkbox-row" style="margin-top:10px;">
+              <input type="checkbox" id="c-dsgvo" required>
+              <label for="c-dsgvo">Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu. Diese Einwilligung kann ich jederzeit widerrufen. *</label>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width:100%; margin-top:22px;">📨 Nachricht senden</button>
+            <p style="font-size:12px; color:var(--muted); margin-top:14px;">* Pflichtfelder</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section class="section-dark" style="text-align:center;">
+    <div class="wrap">
+      <div class="map-placeholder">
+        <div class="ico">📍</div>
+        <strong style="display:block; margin-bottom:6px;">Karte – Wuppertal, NRW</strong>
+        <span>Google Maps Integration</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo_transparent.png" alt="Trimborn & Segler Immobilien">
+        </a>
+        <p>Ehrliche Immobilienberatung – schnell, bodenständig, transparent. Ansässig in Wuppertal, tätig in ganz NRW.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="immobilien.html">Immobilien</a>
+        <a href="bewertung.html">Immobilie bewerten</a>
+        <a href="tippgeber.html">Tippgeber werden</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <div class="footer-contact-item"><span class="ico">📍</span><span>Wuppertal, Nordrhein-Westfalen</span></div>
+        <div class="footer-contact-item"><span class="ico">📞</span><span>Auf Anfrage</span></div>
+        <div class="footer-contact-item"><span class="ico">✉</span><span>info@trimborn-segler.de</span></div>
+        <div class="reaction-box">
+          <div class="lbl">Reaktionszeit</div>
+          <div>In der Regel innerhalb von 24 Stunden</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Trimborn &amp; Segler Immobilien GbR (in Gründung). Alle Rechte vorbehalten.</span>
+      <span><a href="#">Impressum</a><a href="#">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

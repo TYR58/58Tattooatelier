@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immobilie bewerten lassen – Trimborn &amp; Segler Immobilien</title>
+<meta name="description" content="Erhalten Sie eine kostenlose, unverbindliche Einschätzung des Marktwerts Ihrer Immobilie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo_transparent.png" alt="Trimborn & Segler Immobilien">
+    </a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="immobilien.html">Immobilien</a>
+      <a href="bewertung.html" class="active">Bewertung</a>
+      <a href="tippgeber.html">Tippgeber</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="header-right">
+      <a href="#" class="lang-switch">🌐 DE</a>
+      <a href="bewertung.html" class="btn btn-gold"><span class="full">Kostenlose</span>&nbsp;Bewertung</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="index.html">Startseite</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="immobilien.html">Immobilien</a>
+    <a href="bewertung.html" class="active">Bewertung</a>
+    <a href="tippgeber.html">Tippgeber</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="bewertung.html" class="btn btn-gold">Kostenlose Bewertung</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Kostenlos &amp; unverbindlich</span>
+      <h1 style="font-size: clamp(32px,4vw,52px);">Immobilie<br><span class="accent">bewerten lassen</span></h1>
+      <p class="lead">Erhalten Sie eine erste unverbindliche Einschätzung des Marktwerts Ihrer Immobilie – kostenlos und ohne Verpflichtung.</p>
+    </div>
+  </section>
+
+  <!-- ===== TRUST ROW ===== -->
+  <section class="section-dark" style="padding:50px 0;">
+    <div class="wrap">
+      <div class="trust-row">
+        <div class="trust-item">
+          <div class="ico">⌂</div>
+          <div>
+            <h4>Erste Einschätzung</h4>
+            <p>Sie erhalten eine erste Marktpreiseinschätzung auf Basis Ihrer Angaben.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="ico">✓</div>
+          <div>
+            <h4>Genaue Bewertung</h4>
+            <p>Eine genaue Bewertung erfolgt nach Prüfung der Unterlagen und ggf. Besichtigung.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="ico">ⓘ</div>
+          <div>
+            <h4>Unverbindlich</h4>
+            <p>Keine Verpflichtung, kein Druck. Wir beraten Sie ehrlich und transparent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <section class="section-cream">
+    <div class="wrap" style="max-width: 760px;">
+      <div class="form-card">
+        <h3>Bewertungsanfrage</h3>
+        <p class="sub">Alle Felder mit * sind Pflichtfelder.</p>
+
+        <form>
+          <div class="form-section-label">1. Objektinformationen</div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="objektart">Objektart *</label>
+              <select id="objektart" required>
+                <option value="">Bitte wählen…</option>
+                <option>Einfamilienhaus</option>
+                <option>Eigentumswohnung</option>
+                <option>Mehrfamilienhaus</option>
+                <option>Villa</option>
+                <option>Grundstück</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="zustand">Zustand *</label>
+              <select id="zustand" required>
+                <option value="">Bitte wählen…</option>
+                <option>Neuwertig</option>
+                <option>Gepflegt</option>
+                <option>Renovierungsbedürftig</option>
+                <option>Sanierungsbedürftig</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="wohnflaeche">Wohnfläche (m²) *</label>
+              <input type="number" id="wohnflaeche" placeholder="z.B. 150" required>
+            </div>
+            <div class="field">
+              <label for="grundstuecksflaeche">Grundstücksfläche (m²)</label>
+              <input type="number" id="grundstuecksflaeche" placeholder="optional">
+            </div>
+          </div>
+
+          <div class="form-section-label">2. Lage</div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="plz">PLZ *</label>
+              <input type="text" id="plz" placeholder="z.B. 42103" required>
+            </div>
+            <div class="field">
+              <label for="ort">Ort *</label>
+              <input type="text" id="ort" placeholder="z.B. Wuppertal" required>
+            </div>
+          </div>
+
+          <div class="form-section-label">3. Besondere Merkmale</div>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="merkmale">Merkmale</label>
+              <textarea id="merkmale" placeholder="z.B. Garage, Keller, Sauna, Einliegerwohnung, Denkmalschutz, Baujahr, besondere Lage…"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section-label">4. Ihre Kontaktdaten</div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input type="text" id="name" placeholder="Ihr vollständiger Name" required>
+            </div>
+            <div class="field">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="field full">
+              <label for="telefon">Telefon (optional)</label>
+              <input type="tel" id="telefon" placeholder="+49 …">
+            </div>
+          </div>
+
+          <div class="checkbox-row" style="margin-top:24px;">
+            <input type="checkbox" id="dsgvo" required>
+            <label for="dsgvo">Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu. Diese Einwilligung kann ich jederzeit widerrufen. *</label>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width:100%; margin-top:24px;">📨 Bewertung anfragen</button>
+
+          <div class="notice-box">
+            <span aria-hidden="true">ⓘ</span>
+            <span>Die hier eingegebenen Daten dienen als Grundlage für eine erste unverbindliche Einschätzung. Eine genaue Bewertung erfolgt erst nach Prüfung aller relevanten Unterlagen und ggf. einer Besichtigung vor Ort.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo_transparent.png" alt="Trimborn & Segler Immobilien">
+        </a>
+        <p>Ehrliche Immobilienberatung – schnell, bodenständig, transparent. Ansässig in Wuppertal, tätig in ganz NRW.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="immobilien.html">Immobilien</a>
+        <a href="bewertung.html">Immobilie bewerten</a>
+        <a href="tippgeber.html">Tippgeber werden</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <div class="footer-contact-item"><span class="ico">📍</span><span>Wuppertal, Nordrhein-Westfalen</span></div>
+        <div class="footer-contact-item"><span class="ico">📞</span><span>Auf Anfrage</span></div>
+        <div class="footer-contact-item"><span class="ico">✉</span><span>info@trimborn-segler.de</span></div>
+        <div class="reaction-box">
+          <div class="lbl">Reaktionszeit</div>
+          <div>In der Regel innerhalb von 24 Stunden</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Trimborn &amp; Segler Immobilien GbR (in Gründung). Alle Rechte vorbehalten.</span>
+      <span><a href="#">Impressum</a><a href="#">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
