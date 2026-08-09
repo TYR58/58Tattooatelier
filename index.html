@@ -417,6 +417,26 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
 .totop.show{opacity:1;pointer-events:auto}
 .totop:hover{background:var(--gold);color:#0b0a09}
 
+/* ===== SOCIAL STICKY-BUTTONS (WhatsApp + Instagram) ===== */
+.social-fab{position:fixed;top:50%;right:1.3rem;transform:translateY(-50%);z-index:95;
+  display:flex;flex-direction:column;gap:.8rem}
+.social-fab a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(10,14,12,.85);border:1.5px solid var(--gold);color:var(--gold);
+  box-shadow:0 8px 24px rgba(0,0,0,.45);transition:.3s var(--ease)}
+.social-fab a:hover{background:var(--gold);color:#0b0a09;border-color:var(--gold-hi);transform:scale(1.08)}
+.social-fab svg{width:26px;height:26px}
+.social-fab a.fab-whatsapp{animation:fabPulse 3s ease-in-out infinite}
+@keyframes fabPulse{
+  0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 rgba(201,162,75,0)}
+  50%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 14px 3px rgba(201,162,75,.4)}
+}
+@media(max-width:600px){
+  .social-fab{right:.7rem;gap:.6rem}
+  .social-fab a{width:40px;height:40px}
+  .social-fab svg{width:20px;height:20px}
+}
+@media(prefers-reduced-motion:reduce){.social-fab a.fab-whatsapp{animation:none}}
+
 /* ============================================================
    EINFLUG-EFFEKTE
    Überschriften/Eyebrows: alternierend links/rechts.
@@ -803,6 +823,15 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
 
 <button class="totop" id="toTop" aria-label="Nach oben">↑</button>
 
+<div class="social-fab" role="group" aria-label="Schnellkontakt">
+  <a href="https://wa.me/491636247797?text=Hallo%2C%20ich%20interessiere%20mich%20für%20einen%20Tattoo-Termin%20bei%2058%20Tattooatelier!" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Per WhatsApp kontaktieren">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.41-1.42a9.87 9.87 0 004.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.04 2zm0 18.11a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 01-1.26-4.34c0-4.52 3.68-8.2 8.24-8.2 4.55 0 8.23 3.68 8.23 8.2 0 4.52-3.68 8.2-8.24 8.2zm4.52-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01a.9.9 0 00-.65.31c-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/58tattooatelier/" target="_blank" rel="noopener" class="fab-instagram" aria-label="Auf Instagram folgen">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="fabIg" x1="0" y1="24" x2="24" y2="0"><stop offset="0" stop-color="#f58529"/><stop offset=".45" stop-color="#dd2a7b"/><stop offset="1" stop-color="#515bd4"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" stroke="url(#fabIg)" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="url(#fabIg)" stroke-width="1.7"/><circle cx="17.5" cy="6.5" r="1.1" fill="url(#fabIg)"/></svg>
+  </a>
+</div>
+
 <div class="modal" id="modal-imprint" role="dialog" aria-modal="true">
   <div class="modal-box">
     <button class="modal-close" data-close aria-label="Schließen">×</button>
@@ -846,6 +875,10 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
     <ul><li>Auskunft (Art. 15)</li><li>Berichtigung (Art. 16)</li><li>Löschung (Art. 17)</li><li>Einschränkung (Art. 18)</li><li>Datenübertragbarkeit (Art. 20)</li><li>Widerspruch (Art. 21)</li></ul>
     <h3>10. Aufsichtsbehörde</h3>
     <p>LDI NRW, Kavalleriestraße 2–4, 40213 Düsseldorf – <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">ldi.nrw.de</a>.</p>
+    <h3>11. WhatsApp-Kontakt</h3>
+    <p>Auf unserer Website bieten wir einen Button an, der WhatsApp mit einem vorausgefüllten Text öffnet. Dabei werden von unserer Website selbst keine Daten übertragen oder gespeichert – der Button erzeugt lediglich einen Link. Erst wenn Sie die Nachricht aktiv über Ihre eigene WhatsApp-App versenden, findet eine Datenübertragung statt. Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Meta/WhatsApp: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a>. Rechtsgrundlage für die daraufhin folgende Kontaktaufnahme ist Art. 6 Abs. 1 lit. b/f DSGVO.</p>
+    <h3>12. Aufbewahrungsfristen</h3>
+    <p>Daten aus abgeschlossenen Terminbuchungen bewahren wir aufgrund gesetzlicher steuer- und handelsrechtlicher Aufbewahrungspflichten (u. a. § 147 AO, § 257 HGB) bis zu zehn Jahre auf. Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO. Nach Ablauf der jeweiligen Frist werden die Daten gelöscht oder anonymisiert, sofern keine anderweitige Aufbewahrungspflicht besteht.</p>
   </div>
 </div>
 
