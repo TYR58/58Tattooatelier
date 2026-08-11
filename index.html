@@ -469,6 +469,17 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
 .cal-legend .lg-busy i{border-color:var(--red);background:rgba(184,35,31,.25)}
 .cal-howto{margin-top:1.4rem;color:var(--smoke);font-size:.88rem;line-height:1.7;max-width:62ch}
 
+/* Stornobedingungen-Kasten */
+.cal-terms-box{background:linear-gradient(135deg,rgba(201,162,75,.08),rgba(201,162,75,.04));
+  border:2px solid var(--gold-dim);border-radius:4px;padding:1.2rem;margin-bottom:1.4rem;
+  color:var(--bone);font-size:.88rem;line-height:1.7}
+.cal-terms-box::before{content:"⚠";display:inline-block;margin-right:.6rem;color:var(--gold-hi);font-size:1.2rem}
+.cal-terms-box strong{color:var(--gold-hi);font-weight:600}
+.cal-terms-checkbox{display:flex;align-items:flex-start;gap:.8rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.cal-terms-checkbox input{width:20px;height:20px;margin-top:.2rem;cursor:pointer;accent-color:var(--gold)}
+.cal-terms-checkbox label{cursor:pointer;font-size:.86rem;line-height:1.5}
+.cal-terms-checkbox input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
 /* Formular klappt in 3D auf */
 .cal-form{transform-origin:top center;transform:perspective(1400px) rotateX(-90deg);
   opacity:0;max-height:0;overflow:hidden;margin-top:0;
@@ -886,12 +897,13 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
         <h3>Rechtliches</h3>
         <button data-modal="imprint">Impressum</button>
         <button data-modal="privacy">Datenschutz</button>
+        <button data-modal="agb">AGB</button>
         <a href="https://www.instagram.com/58tattooatelier/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© <span id="year"></span> 58 Tattooatelier · Marius Marco Mondin</p>
-      <div class="legal"><button data-modal="imprint">Impressum</button> · <button data-modal="privacy">Datenschutz</button></div>
+      <div class="legal"><button data-modal="imprint">Impressum</button> · <button data-modal="privacy">Datenschutz</button> · <button data-modal="agb">AGB</button></div>
     </div>
   </div>
 </footer>
@@ -990,6 +1002,16 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
     <div class="cal-form" id="calForm">
       <div class="cal-form-inner">
         <div class="cal-chosen" id="calChosen"></div>
+
+        <!-- Stornobedingungen-Hinweiskasten -->
+        <div class="cal-terms-box" id="termsBox">
+          <strong>Wichtig:</strong> Deine Anzahlung sichert dir den Termin. Du kannst ihn bis <strong>48 Stunden vorher</strong> kostenlos verschieben oder absagen – die Anzahlung bekommst du dann zurück oder wir übertragen sie auf deinen neuen Termin. Sagst du später ab oder erscheinst nicht, behalten wir die Anzahlung ein. <strong>Grund:</strong> Kurzfristig frei werdende Termine können nicht mehr neu vergeben werden.
+          <div class="cal-terms-checkbox">
+            <input type="checkbox" id="termsCheck" name="terms" aria-describedby="termsBox">
+            <label for="termsCheck">Ich habe die Stornobedingungen gelesen und akzeptiere sie.</label>
+          </div>
+        </div>
+
         <form id="calRequestForm" novalidate>
           <div class="row-2">
             <div class="field">
@@ -1033,6 +1055,72 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
   </div>
 </div>
 
+<!-- ==================== AGB ==================== -->
+<div class="modal" id="modal-agb" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Schließen">×</button>
+    <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+    <div class="modal-content">
+      <h3>1. Terminbuchung & Buchungsbedingungen</h3>
+      <p>Die Buchung eines Termins auf der Website von 58 Tattooatelier ist verbindlich. Mit der Buchung akzeptierst du diese AGB und die <a href="#" data-modal="privacy">Datenschutzerklärung</a>.</p>
+
+      <h3>2. Anzahlung & Stornobedingungen</h3>
+      <p><strong>Anzahlung:</strong> Die Anzahlung wird fällig nach Bestätigung des Termins durch das Atelier. Sie sichert dir deinen Wunschtermin verbindlich.</p>
+      <p><strong>Stornierung bis 48 Stunden vor dem Termin:</strong> Du kannst deinen Termin kostenfrei stornieren oder verschieben. Die Anzahlung wird dir vollständig erstattet oder auf den neuen Termin übertragen – ganz nach deinem Wunsch.</p>
+      <p><strong>Stornierung weniger als 48 Stunden vor dem Termin:</strong> Die Anzahlung wird einbehalten. Das gilt auch, wenn du dich abmeldest, ohne den Termin vorher zu stornieren, oder wenn du nicht erscheinst.</p>
+      <p><strong>Grund für diese Regelung:</strong> Kurzfristig frei werdende Termine können nicht mehr anderweitig vergeben werden. Die Anzahlung deckt damit den Ausfall des Termins ab.</p>
+
+      <h3>3. Altersvoraussetzung & Ausweispflicht</h3>
+      <p>Die Tätowierung darf nur an Personen über 18 Jahren durchgeführt werden. Gültiger Ausweis (Personalausweis, Reisepass o. ä.) ist erforderlich.</p>
+
+      <h3>4. Ausschlusskriterien</h3>
+      <p>Wir können eine Tätowierung ablehnen, wenn:</p>
+      <ul style="margin-left:1.5rem;margin-top:.5rem;">
+        <li>Du Alkohol, Drogen oder andere Rauschmittel konsumiert hast</li>
+        <li>Du dich unwohl oder krank fühlst</li>
+        <li>Du schwanger bist oder Attest/medizinische Gegebenheiten dagegensprechen</li>
+        <li>Du gesundheitliche Einschränkungen nicht offenlegst</li>
+      </ul>
+
+      <h3>5. Gesundheitliche Verantwortung des Kunden</h3>
+      <p>Du versicherst, dass du keine medizinischen Gegebenheiten hast, die gegen eine Tätowierung sprechen. Dazu gehören (beispielsweise): Blutgerinnungsstörungen, aktive Infektionen, Immunerkrankungen, Allergien gegen Tätowiertinte, Schwangerschaft o. ä.</p>
+      <p><strong>Wichtig:</strong> Bei relevanten Erkrankungen oder Medikamenten, die die Blutgerinnung beeinflussen, ist ein ärztliches Attest erforderlich.</p>
+
+      <h3>6. Nachstech-Termine</h3>
+      <p>Nachstech- oder Nacharbeits-Termine werden nach Absprache gewährt. Dies ist Marius vorbehalten und erfolgt kostenlos oder zu reduzierten Sätzen – je nach Aufwand.</p>
+
+      <h3>7. Gewährleistung & Haftung</h3>
+      <p>Marius arbeitet nach höchsten handwerklichen Standards. Allerdings können wir nicht garantieren, dass ein Motiv zu 100 % deinen Vorstellungen entspricht oder zeitlos bleibt. Allergien gegen Tätowiertinte treten selten, aber nicht ausgeschlossen auf.</p>
+      <p>Wir haften nicht für:</p>
+      <ul style="margin-left:1.5rem;margin-top:.5rem;">
+        <li>Allergische Reaktionen oder Überempfindlichkeiten gegen Tätowiertinte</li>
+        <li>Narbenbildung (hängt von Haut und Wundheilung ab)</li>
+        <li>Blutergüsse oder Schwellungen (normale Reaktionen des Körpers)</li>
+        <li>Mangelnde Nachsorge durch dich (siehe Wundpflege-Anleitung)</li>
+      </ul>
+
+      <h3>8. Nachsorge & Haltbarkeit</h3>
+      <p>Die Haltbarkeit und Optik deines Tattoos hängt maßgeblich von deiner Nachsorge ab. Wir stellen dir genaue Pflegeanweisungen bereit. Wenn du diese nicht befolgst, können wir nicht für Verblassungen oder Infektionen haftbar gemacht werden.</p>
+
+      <h3>9. Fotos & Veröffentlichung</h3>
+      <p>Mit deiner Einwilligung darf Marius Fotos deines fertigen Tattoos zu Portfolio- und Werbezwecken (Website, Instagram, etc.) nutzen. Du kannst dies ablehnen – bitte teile das vor dem Termin mit.</p>
+
+      <h3>10. Datenschutz</h3>
+      <p>Deine Daten werden gemäß unserer <a href="#" data-modal="privacy">Datenschutzerklärung</a> verarbeitet. Für Terminbuchungen speichern wir deine Angaben zur Kontaktaufnahme und gemäß Aufbewahrungsfristen.</p>
+
+      <h3>11. Salvatorische Klausel</h3>
+      <p>Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt der Rest dieser AGB gültig. Ungültige Bestimmungen werden durch gültige ersetzt, die dem Sinn und Zweck des Ursprünglichen entsprechen.</p>
+
+      <h3>12. Rechtsprechung</h3>
+      <p>Es gilt deutsches Recht. Gerichtsstand ist Hagen (Westfalen), sofern nicht zwingende gesetzliche Regelungen anderes vorsehen.</p>
+
+      <p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--ash);">
+        <strong>Fragen?</strong> Kontaktiere uns vor der Buchung. Alle Fragen werden beantwortet – Marius nimmt sich Zeit!
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="cookie" id="cookie" role="dialog" aria-label="Cookie-Hinweis">
   <h4>Datenschutz-Einstellungen</h4>
   <p>Wir laden externe Dienste (Google Maps, Instagram) erst nach Ihrer Zustimmung. Mehr in der <a href="#" data-modal="privacy">Datenschutzerklärung</a>.</p>
@@ -1055,7 +1143,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
    1) Beim Öffnen der Seite läuft die Montage SOFORT von selbst los (0 -> 1).
    2) Danach übernimmt das Scrollen: runter zerlegt das Logo (1 -> 0),
       hoch setzt es wieder zusammen (0 -> 1).
-   Scrollt jemand während der Startanimation, wird sofort übergeben. */
+   Scrollt jemand während der Startanimation, wird sofort übergeben.
+
+   LOGO_SCROLL_DISTANCE: Anpassbare Konstante für die Scroll-Strecke über die sich
+   das Logo auflöst. Kleinere Werte = schneller Auflösen. (Standard: 0.4 = 40% der Viewport-Höhe) */
+const LOGO_SCROLL_DISTANCE = 0.4; // Anpassen für schneller/langsamer (0.2 = sehr schnell, 0.6 = langsam)
+
 const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveal = document.getElementById('reveal');
 if(reveal && !prefersReduced){
@@ -1065,7 +1158,7 @@ if(reveal && !prefersReduced){
   const setP = v => reveal.style.setProperty('--p', v.toFixed(4));
   /* Oben = zusammengesetzt, weiter unten = zerlegt: darum 1 minus Fortschritt. */
   const scrollP = () => {
-    const travel = reveal.offsetHeight - innerHeight;
+    const travel = innerHeight * LOGO_SCROLL_DISTANCE;
     if(travel <= 0) return 1;
     const done = Math.min(1, Math.max(0, -reveal.getBoundingClientRect().top / travel));
     return 1 - done;
@@ -1449,6 +1542,12 @@ if(consent==='all')loadMap();
     if(!d.vorname){ document.getElementById('cal-first').focus(); statusEl.textContent = 'Bitte trag deinen Vornamen ein.'; return false; }
     if(!d.email || !/^\S+@\S+\.\S+$/.test(d.email)){ document.getElementById('cal-email').focus(); statusEl.textContent = 'Bitte trag eine gültige E-Mail-Adresse ein.'; return false; }
     if(!selected){ statusEl.textContent = 'Bitte wähle zuerst einen freien Tag aus.'; return false; }
+    const termsCheck = document.getElementById('termsCheck');
+    if(!termsCheck || !termsCheck.checked){
+      statusEl.textContent = 'Bitte akzeptiere die Stornobedingungen, um fortzufahren.';
+      termsCheck?.focus();
+      return false;
+    }
     return true;
   }
 
