@@ -41,7 +41,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;position:relative;z-index:2}
 
 /* ===== Grün-Gold-Marmor-Hintergrund, fix & treibend ===== */
 .bg{position:fixed;inset:-6%;z-index:0;pointer-events:none;
-  background:url(assets/bg-carbon.jpg) center/cover no-repeat;
+  background:url(assets/bg.jpg) center/cover no-repeat;
   animation:drift 50s ease-in-out infinite alternate}
 .bg-tint{position:fixed;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.35) 20%,rgba(0,0,0,.42) 80%,rgba(0,0,0,.55))}
@@ -137,12 +137,12 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.04}
   .nav-item>a{font-size:1.61rem;padding:1.1rem 0;width:100%}
   .nav-toggle{display:flex;z-index:101}
   .nav .btn-solid{display:inline-flex;font-size:.86rem;padding:.62rem 1.05rem;white-space:nowrap}
-  .nav-logo img{height:clamp(48px,11vw,64px)}
+  .nav-logo img{height:clamp(96px,22vw,128px)}
 }
 @media(max-width:440px){
   .nav-inner{gap:.6rem}
   .nav .btn-solid{font-size:.75rem;padding:.55rem .75rem}
-  .nav-logo img{height:46px}
+  .nav-logo img{height:92px}
 }
 
 /* ============================================================
@@ -151,61 +151,32 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.04}
    auf 1 (alles sitzt zusammen). Alle Layer rechnen daraus
    ihre Position, damit das Scrollen die Animation "scrubbt".
    ============================================================ */
-/* Standard 1 = montiert: ohne JS bleibt das Logo lesbar stehen.
-   Die Startanimation setzt kurz auf 0 und montiert dann selbsttätig. */
-.reveal{--p:1;height:270vh;padding:0;position:relative;z-index:2}
-.reveal-stage{position:sticky;top:0;height:100svh;overflow:hidden;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(1.5rem,4vh,2.8rem)}
+/* Einfache Scale-Animation: Logo wächst von 0 auf 1 */
+.reveal{--p:0;height:auto;padding:0;position:relative;z-index:2;animation:logoScale 3.5s ease-out forwards}
+@keyframes logoScale{from{--p:0}to{--p:1}}
+.reveal-stage{position:relative;height:auto;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(1.5rem,4vh,2.8rem);padding:clamp(4rem,10vh,6rem) 0}
 /* Auch an die Höhe koppeln, damit Szene + CTA auf flachen Screens nicht abgeschnitten werden */
 .rv-scene{position:relative;width:min(620px,86vw,58svh);aspect-ratio:1;
   perspective:1200px;transform-style:preserve-3d;flex-shrink:0}
 .rv-scene>*{position:absolute;will-change:transform,opacity,filter}
 
-.rv-logo{top:50%;left:50%;width:76%;height:auto;
-  transform:translate(-50%,-50%) translateZ(calc((var(--p) - 1) * 680px)) rotateX(calc((1 - var(--p)) * 28deg));
-  filter:drop-shadow(0 14px 44px rgba(0,0,0,.8)) blur(calc((1 - var(--p)) * 5px));
+.rv-logo{top:50%;left:50%;width:clamp(200px,45vw,500px);height:auto;
+  transform:translate(-50%,-50%) scale(var(--p));
+  filter:drop-shadow(0 14px 44px rgba(0,0,0,.8));
   opacity:calc(.06 + var(--p) * .94)}
 
-.rv-ring{inset:2%;border:1px solid rgba(201,162,75,.5);border-radius:50%;
-  transform:translateZ(calc((1 - var(--p)) * 300px)) scale(calc(1.85 - var(--p) * .85)) rotate(calc((1 - var(--p)) * 110deg));
-  opacity:calc(var(--p) * .85)}
-.rv-ring-2{inset:15%;border:1px dashed rgba(244,226,166,.3);border-radius:50%;
-  transform:translateZ(calc((var(--p) - 1) * 380px)) scale(calc(.35 + var(--p) * .65)) rotate(calc((var(--p) - 1) * 160deg));
-  opacity:calc(var(--p) * .7)}
-
-.rv-c{width:clamp(48px,9%,84px);aspect-ratio:1;border:1.5px solid var(--gold);opacity:calc(var(--p) * .95)}
-.rv-c-tl{top:0;left:0;border-right:none;border-bottom:none;
-  transform:translate3d(calc((var(--p) - 1) * 38vw),calc((var(--p) - 1) * 30vh),calc((1 - var(--p)) * 320px)) rotate(calc((1 - var(--p)) * -38deg))}
-.rv-c-tr{top:0;right:0;border-left:none;border-bottom:none;
-  transform:translate3d(calc((1 - var(--p)) * 38vw),calc((var(--p) - 1) * 30vh),calc((1 - var(--p)) * 220px)) rotate(calc((1 - var(--p)) * 38deg))}
-.rv-c-br{bottom:0;right:0;border-left:none;border-top:none;
-  transform:translate3d(calc((1 - var(--p)) * 38vw),calc((1 - var(--p)) * 30vh),calc((1 - var(--p)) * 320px)) rotate(calc((1 - var(--p)) * -38deg))}
-.rv-c-bl{bottom:0;left:0;border-right:none;border-top:none;
-  transform:translate3d(calc((var(--p) - 1) * 38vw),calc((1 - var(--p)) * 30vh),calc((1 - var(--p)) * 220px)) rotate(calc((1 - var(--p)) * 38deg))}
-
-.rv-rule{left:16%;right:16%;bottom:15%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  transform:scaleX(var(--p));opacity:var(--p)}
 
 .rv-meta{display:grid;justify-items:center;gap:1.1rem;text-align:center;padding-inline:1rem;
   opacity:calc((var(--p) - .62) * 2.8);transform:translateY(calc((1 - var(--p)) * 22px))}
 .rv-meta p{color:var(--smoke);max-width:40ch}
-.rv-cue{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:.6rem;
-  font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ash);
-  opacity:calc((var(--p) - .55) * 2.2);pointer-events:none}
-.rv-cue i{width:1px;height:32px;background:linear-gradient(var(--gold),transparent);animation:rvPulse 2s infinite}
-@keyframes rvPulse{0%,100%{opacity:.3}50%{opacity:1}}
 
 @media(max-width:600px){
   .rv-scene{width:92vw}
-  .rv-c{border-width:1.2px}
 }
-/* Ohne Bewegung: fertig montierter Zustand, kein Scroll-Scrubbing */
+/* Ohne Bewegung: Animation deaktivieren */
 @media(prefers-reduced-motion:reduce){
-  .reveal{--p:1;height:auto}
-  .reveal-stage{position:static;height:auto;padding:clamp(6rem,14vh,9rem) 0 clamp(3rem,6vh,4rem)}
-  .rv-cue{display:none}
+  .reveal{animation:none;--p:1}
 }
 
 /* ===== Ticker ===== */
@@ -622,20 +593,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
 <section class="reveal" id="reveal" aria-label="58 Tattooatelier – Hagen">
   <div class="reveal-stage">
     <div class="rv-scene">
-      <span class="rv-ring" aria-hidden="true"></span>
-      <span class="rv-ring-2" aria-hidden="true"></span>
-      <span class="rv-c rv-c-tl" aria-hidden="true"></span>
-      <span class="rv-c rv-c-tr" aria-hidden="true"></span>
-      <span class="rv-c rv-c-br" aria-hidden="true"></span>
-      <span class="rv-c rv-c-bl" aria-hidden="true"></span>
-      <span class="rv-rule" aria-hidden="true"></span>
       <img class="rv-logo" src="assets/logo.png" alt="58 Tattooatelier" fetchpriority="high">
     </div>
     <div class="rv-meta">
       <p>Individuelle Tattoos aus Hagen. Dein Motiv, für dich gezeichnet.</p>
       <a href="#termin" class="btn btn-solid" data-modal="calendar">Termin anfragen</a>
     </div>
-    <div class="rv-cue" aria-hidden="true">Scrollen<i></i></div>
   </div>
 </section>
 
@@ -1137,67 +1100,13 @@ document.getElementById('contactMail').href = 'mailto:'+CONTACT_EMAIL;
 document.querySelectorAll('.imp-mail').forEach(e=>e.textContent=CONTACT_EMAIL);
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* Logo-Reveal: --p steuert die Explosionsansicht
-   (0 = Teile im Raum verteilt, 1 = fertig montiert).
-   Ablauf:
-   1) Beim Öffnen der Seite läuft die Montage SOFORT von selbst los (0 -> 1).
-   2) Danach übernimmt das Scrollen: runter zerlegt das Logo (1 -> 0),
-      hoch setzt es wieder zusammen (0 -> 1).
-   Scrollt jemand während der Startanimation, wird sofort übergeben.
-
-   LOGO_SCROLL_DISTANCE: Anpassbare Konstante für die Scroll-Strecke über die sich
-   das Logo auflöst. Kleinere Werte = schneller Auflösen. (Standard: 0.4 = 40% der Viewport-Höhe) */
-const LOGO_SCROLL_DISTANCE = 0.4; // Anpassen für schneller/langsamer (0.2 = sehr schnell, 0.6 = langsam)
-
+/* Logo-Animation läuft jetzt per CSS (3.5s Scale-Animation) */
 const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const reveal = document.getElementById('reveal');
-if(reveal && !prefersReduced){
-  const INTRO_MS = 1700;
-  let introRunning = false, queued = false;
 
-  const setP = v => reveal.style.setProperty('--p', v.toFixed(4));
-  /* Oben = zusammengesetzt, weiter unten = zerlegt: darum 1 minus Fortschritt. */
-  const scrollP = () => {
-    const travel = innerHeight * LOGO_SCROLL_DISTANCE;
-    if(travel <= 0) return 1;
-    const done = Math.min(1, Math.max(0, -reveal.getBoundingClientRect().top / travel));
-    return 1 - done;
-  };
-  const applyScroll = () => { queued = false; setP(scrollP()); };
-  const queueScroll = () => {
-    introRunning = false;                    // Nutzer scrollt -> Startanimation abgeben
-    if(!queued){ queued = true; requestAnimationFrame(applyScroll); }
-  };
-
-  addEventListener('scroll', queueScroll, {passive:true});
-  addEventListener('resize', queueScroll);
-
-  if(scrollY < 4){
-    introRunning = true;
-    /* --p wird erst im ersten echten Frame auf 0 gesetzt. Läuft die Seite
-       in einem Hintergrund-Tab (kein requestAnimationFrame), bleibt so der
-       CSS-Standard 1 stehen - man sieht dann kein zerlegtes Logo, und die
-       Animation startet sauber, sobald der Tab sichtbar wird. */
-    let t0 = null;
-    const easeOut = t => 1 - Math.pow(1 - t, 3);
-    requestAnimationFrame(function step(now){
-      if(!introRunning) return;              // abgebrochen, Scroll hat übernommen
-      if(t0 === null) t0 = now;
-      const t = Math.min(1, (now - t0) / INTRO_MS);
-      setP(easeOut(t));
-      if(t < 1) requestAnimationFrame(step); else introRunning = false;
-    });
-  } else {
-    applyScroll();
-  }
-}
-
-/* Nav scroll state + mobile toggle.
-   Nav-Logo/Balken erscheinen erst, wenn das Reveal durchgelaufen ist. */
+/* Nav scroll state + mobile toggle */
 const nav=document.getElementById('nav');
-const navTrigger=()=> reveal && !prefersReduced ? reveal.offsetHeight-innerHeight*0.5 : 40;
 addEventListener('scroll',()=>{
-  nav.classList.toggle('scrolled',scrollY>navTrigger());
+  nav.classList.toggle('scrolled',scrollY>120);
   document.getElementById('toTop').classList.toggle('show',scrollY>600);
 },{passive:true});
 const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
