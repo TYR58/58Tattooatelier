@@ -385,7 +385,18 @@
             <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
             <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
           </svg>
-          Instagram besuchen
+          @58tattooatelier
+        </button>
+
+        <!-- Instagram MMM -->
+        <button class="nfc-btn" id="btnInstagramMmm" title="Besuche MMM Tattoo Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+          </svg>
+          @mmm.tattoo
         </button>
 
         <!-- Call -->
@@ -508,6 +519,11 @@ END:VCARD`;
     // Instagram
     document.getElementById('btnInstagram').addEventListener('click', () => {
       window.open('https://instagram.com/58tattooatelier', '_blank', 'noopener');
+    });
+
+    // Instagram MMM
+    document.getElementById('btnInstagramMmm').addEventListener('click', () => {
+      window.open('https://www.instagram.com/mmm.tattoo/', '_blank', 'noopener');
     });
 
     // Call
