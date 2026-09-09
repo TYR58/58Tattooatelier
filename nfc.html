@@ -45,7 +45,8 @@
     }
 
     body {
-      background: url(assets/bg-carbon.jpg?v=1) center/cover no-repeat fixed;
+      background: url('../assets/bg-carbon.jpg') center/cover no-repeat fixed;
+      background-color: var(--pit);
       color: var(--bone);
       font-family: var(--body);
       line-height: 1.6;
@@ -81,17 +82,13 @@
     }
 
     .karte-logo {
-      height: clamp(80px, 15vw, 140px);
-      margin-bottom: 1.5rem;
-      filter: drop-shadow(0 4px 12px rgba(201, 162, 75, 0.15));
+      height: clamp(150px, 30vw, 280px);
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 8px 24px rgba(201, 162, 75, 0.2));
     }
 
     .karte-header h1 {
-      font-family: var(--disp);
-      font-size: clamp(2rem, 5.5vw, 3rem);
-      font-weight: 700;
-      color: var(--gold-hi);
-      margin-bottom: 1rem;
+      display: none;
     }
 
     .karte-header p {
