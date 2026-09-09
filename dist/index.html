@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>58 Tattooatelier – Hagen | Individuelle Tattoos, künstlerisches Handwerk</title>
+<meta name="description" content="58 Tattooatelier in Hagen. Individuelle Tattoos als Kunstwerk – Blackwork, Fineline, Realistic, Lettering. Von Marius, in Handarbeit entworfen.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Alex+Brush&family=Grenze+Gotisch:wght@500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TattooParlor","name":"58 Tattooatelier",
+"address":{"@type":"PostalAddress","streetAddress":"Grimmestraße 17","postalCode":"58099","addressLocality":"Hagen","addressCountry":"DE"},
+"telephone":"+491636247797","priceRange":"€€"}
+</script>
+<style>
+:root{
+  --black:#000; --pit:#0a0e0c; --panel:#0e1512; --panel-2:#131b17; --line:#22302a;
+  --gold:#c9a24b; --gold-hi:#f4e2a6; --gold-2:#e2c179; --gold-dim:#8a6a1e;
+  --emerald:#0e3a2c; --emerald-hi:#1c5c46;
+  --bone:#ece6da; --ash:#93a099; --smoke:#b7c2bb;
+  --disp:'Playfair Display',Georgia,serif; --script:'Alex Brush',cursive;
+  /* Gemaessigte Blackletter: gotischer Charakter, aber bewusst gut lesbar */
+  --gothic:'Grenze Gotisch','Playfair Display',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif; --mono:'Space Mono',monospace;
+  --red:#b8231f; --red-hi:#e03a2f;
+  --shell:min(1200px,92vw); --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--black);color:var(--bone);font-family:var(--body);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.shell{width:var(--shell);margin-inline:auto}
+section{padding:clamp(4rem,8vw,7rem) 0;position:relative;z-index:2}
+
+/* ===== Grün-Gold-Marmor-Hintergrund, fix & treibend ===== */
+.bg{position:fixed;inset:-6%;z-index:0;pointer-events:none;
+  background:url(assets/bg-carbon.jpg) center/cover no-repeat;
+  animation:drift 50s ease-in-out infinite alternate}
+.bg-tint{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.35) 20%,rgba(0,0,0,.42) 80%,rgba(0,0,0,.55))}
+@keyframes drift{from{transform:scale(1) translateY(0)}to{transform:scale(1.07) translateY(-1.6%)}}
+@media(prefers-reduced-motion:reduce){.bg{animation:none}}
+
+/* ===== Typo ===== */
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.04}
+.h-xl{font-size:clamp(2.4rem,6.4vw,4.6rem);font-weight:700}
+/* Sektions-Titel: gotisch, 3D-gepraegt, mit Goldschimmer alle 10s.
+   Der Schimmer laeuft als zweite Hintergrundebene ueber die Schrift
+   (background-clip:text), damit mehrzeilige Titel mit <br> sauber bleiben.
+   Die Praegung kommt per drop-shadow, weil text-shadow bei transparenter
+   Schriftfarbe nicht greifen wuerde. Gilt NICHT fuer die Header-Menuepunkte. */
+.h-lg{font-family:var(--gothic);font-weight:700;font-size:clamp(2.3rem,5.4vw,3.7rem);
+  line-height:1.08;letter-spacing:.01em;
+  background-image:
+    linear-gradient(105deg,transparent 42%,rgba(255,247,214,.92) 50%,transparent 58%),
+    linear-gradient(180deg,#f6efdc 0%,#e6d6ac 55%,#cbb277 100%);
+  background-size:300% 100%,100% 100%;
+  background-position:-120% 0,0 0;
+  background-repeat:no-repeat;
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 1px 0 #7a6528) drop-shadow(0 2px 0 #4c3f19)
+         drop-shadow(0 4px 7px rgba(0,0,0,.8)) drop-shadow(0 0 16px rgba(201,162,75,.18));
+  animation:goldSheen 10s linear infinite}
+@keyframes goldSheen{
+  0%{background-position:220% 0,0 0}
+  13%{background-position:-120% 0,0 0}
+  100%{background-position:-120% 0,0 0}
+}
+@media(prefers-reduced-motion:reduce){.h-lg{animation:none}}
+.h-md{font-size:clamp(1.3rem,2.6vw,1.8rem)}
+.lede{color:var(--smoke);font-size:clamp(1rem,1.3vw,1.1rem);max-width:58ch}
+.script{font-family:var(--script);font-style:normal;color:var(--gold-2)}
+.section-head{margin-bottom:clamp(2rem,4vw,3.2rem)}
+.section-head h2{margin-top:.9rem}
+.section-head .lede{margin-top:1rem}
+
+/* ===== Aktionen: solide Primär-Taste, Text-Link als Sekundärweg ===== */
+.btn{font-family:var(--body);font-weight:600;font-size:.94rem;letter-spacing:.01em;
+  padding:.85rem 1.75rem;border-radius:2px;display:inline-flex;align-items:center;gap:.6rem;
+  border:1px solid var(--gold);color:var(--gold);background:transparent;transition:.3s var(--ease)}
+.btn:hover{background:rgba(201,162,75,.12);border-color:var(--gold-hi);color:var(--gold-hi)}
+.btn-solid{background:var(--gold);color:#0b0a09;border-color:var(--gold)}
+.btn-solid:hover{background:var(--gold-hi);border-color:var(--gold-hi);color:#0b0a09}
+.link-arrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--bone);font-size:.95rem;
+  padding-bottom:.3rem;border-bottom:1px solid rgba(201,162,75,.45);
+  transition:color .3s var(--ease),border-color .3s var(--ease),gap .3s var(--ease)}
+.link-arrow::after{content:"→";color:var(--gold)}
+.link-arrow:hover{color:var(--gold-hi);border-color:var(--gold-hi);gap:.85rem}
+.ig-btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--body);font-weight:500;
+  font-size:.92rem;color:var(--bone);padding-bottom:.3rem;
+  border-bottom:1px solid rgba(201,162,75,.45);transition:.3s var(--ease)}
+.ig-btn svg{width:19px;height:19px}
+.ig-btn:hover{color:var(--gold-hi);border-color:var(--gold-hi)}
+
+/* ===== NAV – großes Logo, klar lesbare Links ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 0;transition:padding .35s var(--ease)}
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(4,6,5,0);transition:.35s}
+.nav.scrolled::before{background:rgba(6,9,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav-inner{width:var(--shell);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.4rem}
+/* Logo erscheint erst, wenn die Intro-Animation durchgelaufen ist – sonst doppelt es das Reveal */
+.nav-logo{opacity:0;transform:translateY(-10px);pointer-events:none;
+  transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.nav.scrolled .nav-logo{opacity:1;transform:none;pointer-events:auto}
+.nav-logo img{height:clamp(56px,6.4vw,84px);filter:drop-shadow(0 2px 14px rgba(0,0,0,.85))}
+.nav-links{display:flex;gap:clamp(1rem,1.9vw,2rem);align-items:center}
+.nav-item{position:relative}
+/* 40% groesser als zuvor (1rem -> 1.4rem) */
+.nav-item>a{font-family:var(--body);font-weight:500;font-size:1.4rem;letter-spacing:.05em;
+  color:var(--bone);padding:.5rem 0;display:inline-block;position:relative;
+  text-shadow:0 1px 8px rgba(0,0,0,.8);transition:color .3s var(--ease)}
+.nav-item>a::after{content:"";position:absolute;left:0;right:0;bottom:.1rem;height:1.5px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-hi));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-item>a:hover,.nav-item>a:focus-visible{color:var(--gold-hi)}
+.nav-item>a:hover::after,.nav-item>a:focus-visible::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:.4rem;width:44px;height:44px;align-items:center;justify-content:center}
+.nav-toggle span{width:26px;height:2px;background:var(--gold)}
+/* Breakpoint hochgezogen (920 -> 1100), weil die groesseren Menuepunkte
+   mehr Platz brauchen. Der Termin-Button bleibt in JEDER Breite sichtbar. */
+@media(max-width:1100px){
+  .nav-links{position:fixed;inset:0 0 0 auto;width:min(84vw,340px);flex-direction:column;justify-content:center;
+    gap:0;background:var(--pit);border-left:1px solid var(--line);transform:translateX(100%);transition:.4s var(--ease);
+    padding:2rem 1.4rem;overflow-y:auto}
+  .nav-links.open{transform:translateX(0)}
+  .nav-item{width:100%;border-bottom:1px solid var(--line)}
+  .nav-item>a{font-size:1.61rem;padding:1.1rem 0;width:100%}
+  .nav-toggle{display:flex;z-index:101}
+  .nav .btn-solid{display:inline-flex;font-size:.86rem;padding:.62rem 1.05rem;white-space:nowrap}
+  .nav-logo img{height:clamp(96px,22vw,128px)}
+}
+@media(max-width:440px){
+  .nav-inner{gap:.6rem}
+  .nav .btn-solid{font-size:.75rem;padding:.55rem .75rem}
+  .nav-logo img{height:92px}
+}
+
+/* ============================================================
+   LOGO-REVEAL – scrollgesteuerte 3D-Explosionsansicht.
+   --p läuft per JS von 0 (Teile weit auseinander im Raum)
+   auf 1 (alles sitzt zusammen). Alle Layer rechnen daraus
+   ihre Position, damit das Scrollen die Animation "scrubbt".
+   ============================================================ */
+/* Einfache Scale-Animation: Logo wächst von 0 auf 1 */
+.reveal{--p:0;height:auto;padding:0;position:relative;z-index:2;animation:logoScale 3.5s ease-out forwards}
+@keyframes logoScale{from{--p:0}to{--p:1}}
+.reveal-stage{position:relative;height:auto;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(1.5rem,4vh,2.8rem);padding:clamp(4rem,10vh,6rem) 0}
+/* Auch an die Höhe koppeln, damit Szene + CTA auf flachen Screens nicht abgeschnitten werden */
+.rv-scene{position:relative;width:min(620px,86vw,58svh);aspect-ratio:1;
+  perspective:1200px;transform-style:preserve-3d;flex-shrink:0}
+.rv-scene>*{position:absolute;will-change:transform,opacity,filter}
+
+.rv-logo{top:50%;left:50%;width:clamp(200px,45vw,500px);height:auto;
+  transform:translate(-50%,-50%) scale(var(--p));
+  filter:drop-shadow(0 14px 44px rgba(0,0,0,.8));
+  opacity:calc(.06 + var(--p) * .94)}
+
+
+.rv-meta{display:grid;justify-items:center;gap:1.1rem;text-align:center;padding-inline:1rem;
+  opacity:calc((var(--p) - .62) * 2.8);transform:translateY(calc((1 - var(--p)) * 22px))}
+.rv-meta p{color:var(--smoke);max-width:40ch}
+
+@media(max-width:600px){
+  .rv-scene{width:92vw}
+}
+/* Ohne Bewegung: Animation deaktivieren */
+@media(prefers-reduced-motion:reduce){
+  .reveal{animation:none;--p:1}
+}
+
+/* ===== Ticker ===== */
+.ticker{border-block:1px solid var(--line);background:rgba(6,9,8,.6);overflow:hidden;padding:.85rem 0;position:relative;z-index:2}
+.ticker-track{display:flex;gap:3rem;white-space:nowrap;width:max-content;animation:scroll 34s linear infinite}
+.ticker span{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:1rem;letter-spacing:.12em;color:var(--ash);display:inline-flex;align-items:center;gap:3rem}
+.ticker span::after{content:"✦";color:var(--gold);font-size:.65rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+/* ===== ÜBER / STUDIO ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.about-copy p{margin-top:1rem;color:var(--smoke)}
+.credo{margin-top:1.8rem;border-top:1px solid var(--line)}
+.credo-item{display:flex;gap:1.1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.credo-item b{font-family:var(--mono);color:var(--gold);font-size:.78rem;min-width:2.2rem}
+.credo-item strong{display:block;font-family:var(--disp);text-transform:uppercase;font-size:1rem}
+.credo-item span{color:var(--ash);font-size:.88rem}
+.about-visual{aspect-ratio:4/5;border-radius:4px;overflow:hidden;border:1px solid var(--line);position:relative}
+.about-visual img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}.about-visual{order:-1;max-width:380px;margin-inline:auto}}
+
+/* ===== STILE – Liste mit Haarlinien statt Kachelraster ===== */
+.styles-list{display:grid;grid-template-columns:repeat(2,1fr);column-gap:clamp(2.5rem,6vw,5rem);
+  border-top:1px solid var(--line)}
+.style-row{display:flex;gap:1.4rem;align-items:baseline;padding:1.3rem .2rem;
+  border-bottom:1px solid var(--line);transition:border-color .3s var(--ease)}
+.style-row:hover{border-color:rgba(201,162,75,.55)}
+.style-row h3{font-size:1.22rem;flex:0 0 8.5ch;transition:color .3s var(--ease)}
+.style-row:hover h3{color:var(--gold-2)}
+.style-row p{color:var(--ash);font-size:.9rem}
+@media(max-width:700px){.styles-list{grid-template-columns:1fr}}
+
+/* ===== GALERIE ===== */
+.gallery-toolbar{display:flex;justify-content:flex-end;margin-bottom:1.2rem}
+.view-toggle{display:inline-flex;align-items:center;gap:.3rem;color:var(--ash);
+  border:1px solid var(--line);border-radius:20px;padding:.35rem;background:rgba(10,14,12,.6)}
+.view-toggle button{font-family:var(--body);font-size:.82rem;
+  padding:.4rem 1rem;border-radius:16px;color:var(--ash);transition:.25s}
+.view-toggle button[aria-pressed="true"]{background:var(--gold);color:#0b0a09;font-weight:700}
+.view-toggle button:not([aria-pressed="true"]):hover{color:var(--bone)}
+
+/* ===== GALERIE-KARUSSELL · 3D-Exploded-View =====
+   Mittleres Bild gross und scharf, die je zwei Nachbarn perspektivisch
+   nach hinten versetzt, kleiner, transparenter und leicht unscharf.
+   Die Positionsklassen (is-c / is-l1 ...) setzt das Skript. */
+.cf-stage{position:relative;aspect-ratio:16/10;perspective:1500px;transform-style:preserve-3d;
+  overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cf-stage:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.slide{position:absolute;top:50%;left:50%;width:58%;aspect-ratio:4/5;margin:0;
+  border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#050605;
+  transform:translate(-50%,-50%);opacity:0;pointer-events:none;
+  transition:transform .75s var(--ease),opacity .6s var(--ease),filter .6s var(--ease);
+  will-change:transform,opacity,filter}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide .cap{position:absolute;left:0;right:0;bottom:0;padding:1rem 1.2rem;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--gold);text-transform:uppercase;
+  opacity:0;transition:opacity .5s var(--ease)}
+
+/* Mitte: scharf, vorn, im Fokus */
+.slide.is-c{opacity:1;z-index:5;pointer-events:auto;filter:none;
+  transform:translate(-50%,-50%) translateZ(0) scale(1);
+  box-shadow:0 26px 70px rgba(0,0,0,.75),0 0 0 1px rgba(201,162,75,.35)}
+.slide.is-c .cap{opacity:1}
+/* Erste Nachbarn: angedeutet */
+.slide.is-l1,.slide.is-r1{opacity:.55;z-index:4;filter:blur(1.6px);cursor:pointer;pointer-events:auto}
+.slide.is-l1{transform:translate(-50%,-50%) translateX(-64%) translateZ(-240px) rotateY(26deg) scale(.86)}
+.slide.is-r1{transform:translate(-50%,-50%) translateX(64%) translateZ(-240px) rotateY(-26deg) scale(.86)}
+/* Zweite Nachbarn: weiter hinten, stärker verblasst */
+.slide.is-l2,.slide.is-r2{opacity:.26;z-index:3;filter:blur(3.4px)}
+.slide.is-l2{transform:translate(-50%,-50%) translateX(-108%) translateZ(-460px) rotateY(32deg) scale(.7)}
+.slide.is-r2{transform:translate(-50%,-50%) translateX(108%) translateZ(-460px) rotateY(-32deg) scale(.7)}
+/* Alles Weitere bleibt unsichtbar hinter der Bühne */
+.slide.is-far{opacity:0;z-index:1;
+  transform:translate(-50%,-50%) translateZ(-700px) scale(.55)}
+@media(max-width:700px){
+  .cf-stage{aspect-ratio:1/1}
+  .slide{width:70%}
+  .slide.is-l1{transform:translate(-50%,-50%) translateX(-58%) translateZ(-220px) rotateY(24deg) scale(.82)}
+  .slide.is-r1{transform:translate(-50%,-50%) translateX(58%) translateZ(-220px) rotateY(-24deg) scale(.82)}
+  .slide.is-l2,.slide.is-r2{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .slide{transition:opacity .3s linear}
+}
+
+.slide-controls{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.1rem}
+.slide-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:.25s;flex-shrink:0}
+.slide-btn:hover{border-color:var(--gold);background:rgba(201,162,75,.1)}
+.slide-dots{display:flex;gap:.5rem}
+.slide-dots button{width:8px;height:8px;border-radius:50%;background:var(--line);transition:.25s}
+.slide-dots button[aria-current="true"]{background:var(--gold);width:22px;border-radius:4px}
+.slide-play{margin-left:.4rem}
+
+.gallery-grid{display:none;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.7rem}
+.gallery-grid.active{display:grid}
+.slideshow-wrap.hidden,.slide-controls.hidden{display:none}
+.g-tile{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:3px;border:1px solid var(--line);cursor:pointer;background:#0a0a0a}
+.g-tile img,.g-tile video{width:100%;height:100%;object-fit:cover;transition:.5s}
+.g-tile::after{content:"⤢";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:1.3rem;background:rgba(0,0,0,.5);opacity:0;transition:.3s}
+.g-tile:hover img,.g-tile:hover video{transform:scale(1.05)}
+.g-tile:hover::after{opacity:1}
+.g-tile.wide{grid-column:span 2;aspect-ratio:16/10}
+.g-tile .badge{position:absolute;top:8px;left:8px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;
+  color:var(--gold);background:rgba(0,0,0,.6);border:1px solid rgba(201,162,75,.5);padding:.2rem .5rem;border-radius:2px;z-index:2}
+@media(max-width:600px){.g-tile.wide{grid-column:auto;aspect-ratio:3/4}}
+
+.lb{position:fixed;inset:0;z-index:1000;background:rgba(3,4,3,.94);display:none;align-items:center;justify-content:center;padding:2rem}
+.lb.open{display:flex}
+.lb img,.lb video{max-width:90vw;max-height:86vh;border:1px solid var(--line);border-radius:3px}
+.lb-close,.lb-nav{position:absolute;color:var(--bone);font-size:1.8rem;background:rgba(0,0,0,.4);width:46px;height:46px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s;border:1px solid var(--line)}
+.lb-close{top:1.3rem;right:1.3rem}
+.lb-nav{top:50%;transform:translateY(-50%)}
+.lb-prev{left:1.3rem}.lb-next{right:1.3rem}
+.lb-close:hover,.lb-nav:hover{background:var(--gold);color:#0b0a09;border-color:var(--gold)}
+
+/* ===== ABLAUF + FAQ ===== */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;margin-bottom:clamp(3rem,6vw,4.5rem)}
+.step{padding-top:1.2rem;border-top:1px solid var(--line);position:relative}
+.step::before{content:"";position:absolute;top:-1px;left:0;width:32px;height:2px;background:var(--gold)}
+.step .n{font-family:var(--mono);color:var(--gold);font-size:.78rem}
+.step h3{font-size:1.1rem;margin:.6rem 0 .4rem;text-transform:uppercase}
+.step p{color:var(--ash);font-size:.88rem}
+.faq{max-width:800px;margin-inline:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;text-align:left;
+  font-family:var(--disp);text-transform:uppercase;font-size:1rem;color:var(--bone)}
+.faq-q .ico{color:var(--gold);font-size:1.3rem;transition:.3s;flex-shrink:0}
+.faq-item.open .faq-q .ico{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-a p{padding-bottom:1.2rem;color:var(--smoke);font-size:.92rem}
+
+/* ===== BEWERTUNGEN ===== */
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.1rem}
+.review{border:1px solid var(--line);border-radius:4px;padding:1.6rem;background:rgba(10,14,12,.6);position:relative}
+.review .stars{color:var(--gold);letter-spacing:.2em;font-size:.85rem}
+.review p{margin:.9rem 0;color:var(--smoke);font-size:.92rem;font-style:italic}
+.review cite{font-family:var(--mono);font-size:.72rem;color:var(--ash);font-style:normal}
+.reviews-cta{text-align:center;margin-top:2.2rem}
+
+/* ===== INSTAGRAM ===== */
+.insta-cta{margin-top:-1rem}
+
+/* ===== TERMIN ===== */
+.booking-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,5vw,3.6rem);align-items:start}
+form{display:grid;gap:1rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+label .req{color:var(--gold)}
+input,select,textarea{background:rgba(10,14,12,.7);border:1px solid var(--line);border-radius:2px;padding:.75rem .85rem;
+  color:var(--bone);font-family:var(--body);font-size:.92rem;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
+.consent{display:flex;gap:.6rem;align-items:flex-start}
+.consent input{width:auto;margin-top:.2rem;accent-color:var(--gold)}
+.consent label{font-family:var(--body);text-transform:none;color:var(--smoke);font-size:.82rem;line-height:1.5}
+.consent a{color:var(--gold);text-decoration:underline}
+.form-note{font-family:var(--mono);font-size:.66rem;color:var(--ash)}
+.form-status{font-size:.88rem;color:var(--gold);min-height:1.1rem}
+@media(max-width:800px){.booking-grid{grid-template-columns:1fr}.row-2{grid-template-columns:1fr}}
+
+/* ===== KONTAKT ===== */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,3.2rem)}
+.contact-info{display:grid;gap:1.4rem;align-content:start}
+.ci{display:flex;gap:.9rem;align-items:flex-start}
+.ci .ico{color:var(--gold);width:20px;flex-shrink:0;margin-top:2px}
+.ci b{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);margin-bottom:.15rem}
+.map-wrap{border:1px solid var(--line);border-radius:4px;overflow:hidden;min-height:320px;position:relative;background:rgba(10,14,12,.6)}
+.map-wrap iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.4) contrast(1.05) invert(.9) hue-rotate(150deg)}
+.map-consent{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;gap:1rem;padding:2rem}
+.map-consent p{color:var(--ash);font-size:.84rem;max-width:32ch}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+/* ===== FOOTER ===== */
+.footer{border-top:1px solid var(--line);padding:clamp(3rem,6vw,4rem) 0 2rem;position:relative;z-index:2}
+.footer-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.2rem;margin-bottom:2.6rem}
+.footer-logo img{height:60px;margin-bottom:1rem}
+.footer-brand p{color:var(--ash);font-size:.86rem;max-width:32ch}
+.footer-col h3{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.footer-col a,.footer-col button{display:block;color:var(--smoke);font-size:.88rem;margin-bottom:.65rem;text-align:left}
+.footer-col a:hover,.footer-col button:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.6rem;border-top:1px solid var(--line)}
+.footer-bottom p,.footer-bottom .legal{font-family:var(--mono);font-size:.68rem;color:var(--ash)}
+@media(max-width:760px){.footer-top{grid-template-columns:1fr}}
+
+/* ===== MODAL ===== */
+.modal{position:fixed;inset:0;z-index:1100;background:rgba(3,4,3,.85);display:none;align-items:flex-start;justify-content:center;padding:5vh 1rem;overflow-y:auto}
+.modal.open{display:flex}
+.modal-box{background:var(--pit);border:1px solid var(--line);border-radius:4px;max-width:800px;width:100%;padding:clamp(1.6rem,4vw,2.6rem);position:relative;margin-block:auto}
+.modal-box h2{color:var(--gold);margin-bottom:1.2rem}
+.modal-box h3{font-family:var(--disp);text-transform:uppercase;font-size:1rem;margin:1.4rem 0 .5rem}
+.modal-box p,.modal-box li{color:var(--smoke);font-size:.88rem;margin-bottom:.6rem}
+.modal-box ul{padding-left:1.1rem}
+.modal-box a{color:var(--gold);text-decoration:underline}
+.modal-close{position:sticky;top:0;float:right;margin:-.8rem -.8rem 0 0;width:38px;height:38px;border-radius:50%;
+  background:rgba(10,14,12,.9);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.modal-close:hover{background:var(--gold);color:#0b0a09}
+
+/* ============================================================
+   TERMINKALENDER · dunkler Grunge-Look, goldene Überschrift
+   ============================================================ */
+.cal-box{max-width:940px}
+.cal-box h2{font-family:var(--gothic);font-size:clamp(2rem,5vw,3rem);color:var(--gold-hi);
+  text-align:center;letter-spacing:.02em;
+  text-shadow:0 1px 0 #6b5a2a,0 2px 0 #4a3d1c,0 4px 10px rgba(0,0,0,.85)}
+/* Angeraute Oberfläche: unregelmäßige Lichter statt glatter Fläche */
+.cal-surface{margin-top:1.6rem;padding:clamp(1rem,2.6vw,1.6rem);border-radius:3px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(120% 80% at 12% 0%,rgba(201,162,75,.09),transparent 60%),
+    radial-gradient(90% 70% at 88% 100%,rgba(28,92,70,.16),transparent 62%),
+    repeating-linear-gradient(115deg,rgba(255,255,255,.014) 0 2px,transparent 2px 5px),
+    var(--panel)}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.1rem}
+.cal-nav strong{font-family:var(--gothic);font-size:clamp(1.2rem,3vw,1.6rem);color:var(--gold-2);letter-spacing:.03em}
+.cal-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);color:var(--gold);
+  font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:.25s var(--ease)}
+.cal-nav button:hover:not(:disabled){background:rgba(201,162,75,.14);border-color:var(--gold)}
+.cal-nav button:disabled{opacity:.28;cursor:not-allowed}
+
+.cal-weekdays,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
+.cal-weekdays{margin-bottom:.5rem}
+.cal-weekdays span{text-align:center;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ash);padding:.3rem 0}
+.cal-cell{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  font-family:var(--body);font-size:clamp(.85rem,2.2vw,1.05rem);font-weight:500;
+  border:1px solid var(--line);background:rgba(6,9,8,.5);color:var(--smoke);
+  /* leicht unregelmäßige Ecken -> weniger "steril" */
+  border-radius:9px 4px 10px 5px;transition:.22s var(--ease)}
+.cal-cell.is-empty{border:none;background:none}
+.cal-cell.is-free{cursor:pointer;color:var(--bone)}
+.cal-cell.is-free:hover,.cal-cell.is-free:focus-visible{
+  background:rgba(201,162,75,.16);border-color:var(--gold);color:var(--gold-hi);transform:translateY(-2px)}
+.cal-cell.is-today{box-shadow:inset 0 0 0 1px rgba(201,162,75,.55)}
+.cal-cell.is-sel{background:var(--gold);border-color:var(--gold);color:#0b0a09;font-weight:700}
+.cal-cell.is-past{opacity:.3;cursor:not-allowed}
+.cal-cell.is-blocked{cursor:not-allowed;color:var(--ash)}
+/* Handgemaltes rotes X über belegten Tagen */
+.cal-x{position:absolute;inset:6%;width:88%;height:88%;pointer-events:none;overflow:visible}
+.cal-x path{stroke:var(--red);fill:none;stroke-linecap:round;stroke-width:4.6;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.7))}
+.cal-x path:nth-child(2){stroke:var(--red-hi);stroke-width:2.4;opacity:.75}
+/* Tooltip für freie Tage */
+.cal-cell.is-free::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%) translateY(4px);white-space:nowrap;z-index:6;
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--bone);background:rgba(6,9,8,.96);border:1px solid var(--gold-dim);
+  padding:.35rem .6rem;border-radius:3px;opacity:0;pointer-events:none;transition:.22s var(--ease)}
+.cal-cell.is-free:hover::after,.cal-cell.is-free:focus-visible::after{opacity:1;transform:translateX(-50%)}
+.cal-legend{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:center;margin-top:1.2rem;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ash)}
+.cal-legend i{display:inline-block;width:12px;height:12px;border:1px solid var(--line);
+  border-radius:4px 2px 5px 2px;margin-right:.45rem;vertical-align:-2px}
+.cal-legend .lg-free i{border-color:var(--gold);background:rgba(201,162,75,.2)}
+.cal-legend .lg-busy i{border-color:var(--red);background:rgba(184,35,31,.25)}
+.cal-howto{margin-top:1.4rem;color:var(--smoke);font-size:.88rem;line-height:1.7;max-width:62ch}
+
+/* Stornobedingungen-Kasten */
+.cal-terms-box{background:linear-gradient(135deg,rgba(201,162,75,.08),rgba(201,162,75,.04));
+  border:2px solid var(--gold-dim);border-radius:4px;padding:1.2rem;margin-bottom:1.4rem;
+  color:var(--bone);font-size:.88rem;line-height:1.7}
+.cal-terms-box::before{content:"⚠";display:inline-block;margin-right:.6rem;color:var(--gold-hi);font-size:1.2rem}
+.cal-terms-box strong{color:var(--gold-hi);font-weight:600}
+.cal-terms-checkbox{display:flex;align-items:flex-start;gap:.8rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.cal-terms-checkbox input{width:20px;height:20px;margin-top:.2rem;cursor:pointer;accent-color:var(--gold)}
+.cal-terms-checkbox label{cursor:pointer;font-size:.86rem;line-height:1.5}
+.cal-terms-checkbox input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* Formular klappt in 3D auf */
+.cal-form{transform-origin:top center;transform:perspective(1400px) rotateX(-90deg);
+  opacity:0;max-height:0;overflow:hidden;margin-top:0;
+  transition:transform .6s var(--ease),opacity .4s var(--ease),
+             max-height .6s var(--ease),margin-top .6s var(--ease)}
+.cal-form.open{transform:perspective(1400px) rotateX(0);opacity:1;max-height:1200px;margin-top:1.6rem}
+.cal-form-inner{border:1px solid var(--line);border-radius:3px;padding:clamp(1.1rem,3vw,1.7rem);
+  background:linear-gradient(180deg,rgba(19,27,23,.95),rgba(10,14,12,.95))}
+.cal-chosen{font-family:var(--gothic);font-size:clamp(1.15rem,3vw,1.5rem);color:var(--gold-hi);
+  margin-bottom:1.2rem;padding-bottom:.8rem;border-bottom:1px solid var(--line)}
+.cal-form label{display:block;margin-bottom:.35rem}
+.cal-form .row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:620px){.cal-form .row-2{grid-template-columns:1fr}}
+/* Breiter WhatsApp-Button: soll bewusst zum Schreiben einladen */
+.wa-wide{display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;
+  margin-top:1.4rem;padding:1.1rem 1.4rem;border-radius:3px;border:none;
+  background:linear-gradient(180deg,#2bb741,#1d8d31);color:#04140a;
+  font-family:var(--body);font-weight:700;font-size:1.05rem;letter-spacing:.01em;
+  box-shadow:0 10px 30px rgba(37,183,65,.28);transition:.25s var(--ease)}
+.wa-wide:hover{background:linear-gradient(180deg,#33cc4a,#22a339);transform:translateY(-2px);
+  box-shadow:0 14px 38px rgba(37,183,65,.38)}
+.wa-wide svg{width:24px;height:24px;fill:currentColor;flex-shrink:0}
+.cal-alt{margin-top:.9rem;text-align:center}
+.cal-note{margin-top:.9rem;font-size:.78rem;color:var(--ash);text-align:center;line-height:1.6}
+.cal-status{margin-top:.8rem;font-size:.86rem;color:var(--gold);min-height:1.2rem;text-align:center}
+@media(prefers-reduced-motion:reduce){
+  .cal-form{transition:opacity .25s linear,max-height .25s linear,margin-top .25s linear;transform:none}
+  .cal-form.open{transform:none}
+  .cal-cell{transition:none}
+}
+
+/* ===== COOKIE ===== */
+.cookie{position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:1200;max-width:500px;margin-inline:auto;
+  background:var(--pit);border:1px solid var(--line);border-radius:4px;padding:1.4rem;box-shadow:0 20px 60px rgba(0,0,0,.6);
+  transform:translateY(150%);transition:.5s var(--ease)}
+.cookie.show{transform:translateY(0)}
+.cookie h4{font-family:var(--disp);text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.cookie p{color:var(--ash);font-size:.8rem;margin-bottom:1rem}
+.cookie p a{color:var(--gold);text-decoration:underline}
+.cookie-btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.cookie-btns .btn{font-size:.66rem;padding:.55rem .95rem}
+
+.totop{position:fixed;bottom:1.3rem;right:1.3rem;z-index:90;width:42px;height:42px;border-radius:50%;
+  background:rgba(10,14,12,.85);border:1px solid var(--line);color:var(--gold);display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:.3s;font-size:1.1rem}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--gold);color:#0b0a09}
+
+/* ===== SOCIAL STICKY-BUTTONS (WhatsApp + Instagram) =====
+   Oben links, fest am Viewport. Der Abstand nach oben haelt sie
+   frei von der Kopfzeile, damit sie das Nav-Logo nicht ueberdecken. */
+.social-fab{position:fixed;top:clamp(118px,15vh,168px);left:clamp(.7rem,2vw,1.3rem);z-index:95;
+  display:flex;flex-direction:column;gap:.8rem}
+.social-fab a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(10,14,12,.85);border:1.5px solid var(--gold);color:var(--gold);
+  box-shadow:0 8px 24px rgba(0,0,0,.45);transition:.3s var(--ease)}
+.social-fab a:hover{background:var(--gold);color:#0b0a09;border-color:var(--gold-hi);transform:scale(1.08)}
+.social-fab svg{width:26px;height:26px}
+.social-fab a.fab-whatsapp{animation:fabPulse 3s ease-in-out infinite}
+@keyframes fabPulse{
+  0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 rgba(201,162,75,0)}
+  50%{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 14px 3px rgba(201,162,75,.4)}
+}
+@media(max-width:600px){
+  .social-fab{top:clamp(96px,13vh,124px);left:.6rem;gap:.6rem}
+  .social-fab a{width:40px;height:40px}
+  .social-fab svg{width:20px;height:20px}
+}
+@media(prefers-reduced-motion:reduce){.social-fab a.fab-whatsapp{animation:none}}
+
+/* ============================================================
+   EINFLUG-EFFEKTE
+   Überschriften/Eyebrows: alternierend links/rechts.
+   Fließtext: ruhiges Einblenden (kein Slide).
+   ============================================================ */
+.fly{opacity:0;transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.fly-l{transform:translateX(-60px)}
+.fly-r{transform:translateX(60px)}
+.fly.in{opacity:1;transform:none}
+.fade{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease) .1s,transform .7s var(--ease) .1s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fly,.fade{opacity:1;transform:none;transition:none}}
+
+/* ===== COVER-UPS · Vorher-Nachher-Galerie ===== */
+/* Titel zentral und gross, der erklaerende Text deutlich kleiner darunter */
+.cu-head{text-align:center}
+.h-hero{font-size:clamp(2.9rem,8vw,5.4rem)}
+.cu-sub{margin:1.2rem auto 0;max-width:56ch;color:var(--ash);font-size:.92rem;line-height:1.7}
+.cu-sub strong{color:var(--smoke);font-weight:600}
+.cu-grid{display:grid;gap:clamp(2.2rem,5vw,3.6rem);grid-template-columns:1fr}
+@media(min-width:900px){.cu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cu-item{margin:0}
+
+.cu-slider{position:relative;width:100%;max-width:480px;margin-inline:auto;aspect-ratio:9/16;
+  overflow:hidden;border-radius:4px;border:1px solid var(--line);background:#050605;
+  touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.cu-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  pointer-events:none;-webkit-user-drag:none}
+.cu-slider .cu-after{z-index:2;clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+
+.cu-tag{position:absolute;top:.85rem;z-index:3;font-family:var(--mono);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--bone);
+  padding:.35rem .7rem;border-radius:2px;background:rgba(6,9,8,.72);
+  backdrop-filter:blur(6px);transition:opacity .25s var(--ease)}
+.cu-tag-before{right:.85rem}
+.cu-tag-after{left:.85rem;color:var(--gold-hi)}
+
+.cu-divider{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;margin-left:-1px;z-index:4;
+  background:linear-gradient(180deg,transparent,var(--gold) 12%,var(--gold-hi) 50%,var(--gold) 88%,transparent);
+  pointer-events:none;box-shadow:0 0 18px rgba(0,0,0,.7)}
+.cu-handle{position:absolute;z-index:5;pointer-events:none;top:50%;
+  left:clamp(27px,var(--pos,50%),calc(100% - 27px));transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);
+  background:rgba(6,9,8,.55);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;gap:.45rem;
+  transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
+.cu-slider:hover .cu-handle,.cu-slider.is-active .cu-handle{
+  transform:translate(-50%,-50%) scale(1.09);background:rgba(6,9,8,.8);border-color:var(--gold-hi)}
+.cu-handle i{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.cu-handle i:first-child{border-right:6px solid var(--gold-hi)}
+.cu-handle i:last-child{border-left:6px solid var(--gold-hi)}
+.cu-slider:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.cu-caption{max-width:480px;margin:1rem auto 0;display:flex;justify-content:space-between;
+  align-items:baseline;gap:1rem;padding-top:.8rem;border-top:1px solid var(--line)}
+.cu-caption h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;margin:0}
+.cu-caption span{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ash);text-align:right}
+
+.cu-hint{margin-top:clamp(2rem,4vw,3rem);text-align:center;font-family:var(--mono);
+  font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ash)}
+.cu-empty{color:var(--ash);text-align:center;padding:2rem 0}
+@media(prefers-reduced-motion:reduce){.cu-handle,.cu-tag{transition:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<div class="bg-tint" aria-hidden="true"></div>
+
+<!-- ==================== LOGO-REVEAL (3D-Explosionsansicht) ==================== -->
+<section class="reveal" id="reveal" aria-label="58 Tattooatelier – Hagen">
+  <div class="reveal-stage">
+    <div class="rv-scene">
+      <img class="rv-logo" src="assets/logo.png" alt="58 Tattooatelier" fetchpriority="high">
+    </div>
+    <div class="rv-meta">
+      <p>Individuelle Tattoos aus Hagen. Dein Motiv, für dich gezeichnet.</p>
+      <a href="#termin" class="btn btn-solid" data-modal="calendar">Termin anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== NAV ==================== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="58 Tattooatelier – zurück zur Startseite">
+      <img src="assets/logo.png" alt="58 Tattooatelier">
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
+      <div class="nav-item"><a href="#studio">Atelier</a></div>
+      <div class="nav-item"><a href="#galerie">Werke</a></div>
+      <div class="nav-item"><a href="#coverups">Cover-Ups</a></div>
+      <div class="nav-item"><a href="#bewertungen">Rezensionen</a></div>
+      <div class="nav-item"><a href="#ablauf">Ablauf</a></div>
+      <div class="nav-item"><a href="#kontakt">Kontakt</a></div>
+    </nav>
+    <div class="nav-right">
+      <a href="#termin" class="btn btn-solid" data-modal="calendar">Termin anfragen</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Blackwork</span><span>Fineline</span><span>Realistic</span><span>Lettering</span><span>Ornamental</span><span>Cover-up</span><span>Custom Design</span>
+    <span>Blackwork</span><span>Fineline</span><span>Realistic</span><span>Lettering</span><span>Ornamental</span><span>Cover-up</span><span>Custom Design</span>
+  </div>
+</div>
+
+<!-- ==================== STUDIO ==================== -->
+<section id="studio">
+  <div class="shell about-grid">
+    <div class="about-copy">
+      <span class="eyebrow fly fly-r">Das Atelier</span>
+      <h2 class="h-lg fly fly-r">Ehrliches Handwerk<br>mitten in Hagen</h2>
+      <p class="fade">Kein Motiv von der Stange: Jedes Design entsteht in Ruhe mit dir – vom feinen Linework bis zum großflächigen Blackwork.</p>
+      <div class="credo">
+        <div class="credo-item fade"><b>01</b><div><strong>Hygiene ohne Kompromiss</strong><span>Einwegmaterial, sterile Arbeitsweise, geprüfte Farben.</span></div></div>
+        <div class="credo-item fade"><b>02</b><div><strong>Custom-Work statt Katalog</strong><span>Dein Motiv wird für dich gezeichnet – nicht kopiert.</span></div></div>
+        <div class="credo-item fade"><b>03</b><div><strong>Ehrliche Beratung</strong><span>Wir sagen dir offen, was auf deiner Haut funktioniert.</span></div></div>
+      </div>
+    </div>
+    <div class="about-visual fly fly-l"><img src="assets/marius-work.jpg" alt="Marius bei der Arbeit im 58 Tattooatelier" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ==================== STILE ==================== -->
+<section id="stile">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-l">Leistungen</span>
+      <h2 class="h-lg fly fly-l">Stile & Techniken</h2>
+    </div>
+    <div class="styles-list fade">
+      <div class="style-row"><h3>Blackwork</h3><p>Tiefschwarze Flächen, starker Kontrast.</p></div>
+      <div class="style-row"><h3>Fineline</h3><p>Feinste Linien, filigrane Details.</p></div>
+      <div class="style-row"><h3>Realistic</h3><p>Portraits mit Tiefe und weichen Verläufen.</p></div>
+      <div class="style-row"><h3>Lettering</h3><p>Von Kalligrafie bis Blackletter.</p></div>
+      <div class="style-row"><h3>Ornamental</h3><p>Symmetrische, geometrische Strukturen.</p></div>
+      <div class="style-row"><h3>Cover-up</h3><p>Altes Tattoo überarbeiten oder ersetzen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GALERIE ==================== -->
+<section id="galerie">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-l">Arbeiten</span>
+      <h2 class="h-lg fly fly-l">Galerie</h2>
+    </div>
+
+    <div class="gallery-toolbar fade">
+      <div class="view-toggle" role="group" aria-label="Galerie-Ansicht wählen">
+        <button id="viewSlideshow" aria-pressed="true">Slideshow</button>
+        <button id="viewGrid" aria-pressed="false">Übersicht</button>
+      </div>
+    </div>
+
+    <div class="slideshow-wrap fade" id="slideshowWrap">
+      <div class="cf-stage" id="slideshow" tabindex="0"
+           aria-roledescription="Karussell" aria-label="Galerie fertiger Tattoos – mit Pfeiltasten blättern">
+        <div class="slide" data-badge="Realistic"><img src="assets/work-lion.jpg" alt="Löwen-Motiv mit Auge, Realistic"><span class="cap">Realistic · Löwen-Motiv</span></div>
+        <div class="slide" data-badge="Blackwork"><img src="assets/work-hercules.jpg" alt="Herakles-Motiv, Blackwork"><span class="cap">Blackwork · Herakles</span></div>
+        <div class="slide" data-badge="Sketchy"><img src="assets/work-adler.jpg" alt="Bundesadler-Motiv, Sketchy Style"><span class="cap">Sketchy · Bundesadler</span></div>
+        <div class="slide" data-badge="Portrait"><img src="assets/work-clown.jpg" alt="Portrait-Tattoo"><span class="cap">Portrait · Realistic</span></div>
+        <div class="slide" data-badge="Lettering"><img src="assets/work-fingerlettering.jpg" alt="Finger-Lettering"><span class="cap">Lettering · Finger-Piece</span></div>
+        <div class="slide" data-badge="Blackwork"><img src="assets/work-joker.jpg" alt="Joker Hand-Tattoo"><span class="cap">Blackwork · Joker</span></div>
+        <div class="slide" data-badge="Fineline"><img src="assets/work-mamma.jpg" alt="Mamma Schriftzug"><span class="cap">Fineline · Mamma</span></div>
+      </div>
+      <div class="slide-controls">
+        <button class="slide-btn" id="slidePrev" aria-label="Vorheriges Bild">‹</button>
+        <div class="slide-dots" id="slideDots"></div>
+        <button class="slide-btn" id="slidePlay" aria-label="Diashow pausieren">❚❚</button>
+        <button class="slide-btn" id="slideNext" aria-label="Nächstes Bild">›</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="gallery">
+      <button class="g-tile" data-type="img"><span class="badge">Realistic</span><img src="assets/work-lion.jpg" alt="Löwen-Motiv mit Auge" loading="lazy"></button>
+      <button class="g-tile" data-type="img"><span class="badge">Blackwork</span><img src="assets/work-hercules.jpg" alt="Herakles-Motiv" loading="lazy"></button>
+      <button class="g-tile" data-type="img"><span class="badge">Sketchy</span><img src="assets/work-adler.jpg" alt="Bundesadler-Motiv" loading="lazy"></button>
+      <button class="g-tile wide" data-type="img"><span class="badge">Portrait</span><img src="assets/work-clown.jpg" alt="Portrait-Tattoo" loading="lazy"></button>
+      <button class="g-tile" data-type="img"><span class="badge">Lettering</span><img src="assets/work-fingerlettering.jpg" alt="Finger-Lettering" loading="lazy"></button>
+      <button class="g-tile" data-type="img"><span class="badge">Blackwork</span><img src="assets/work-joker.jpg" alt="Joker Hand-Tattoo" loading="lazy"></button>
+      <button class="g-tile" data-type="img"><span class="badge">Fineline</span><img src="assets/work-mamma.jpg" alt="Mamma Schriftzug" loading="lazy"></button>
+      <button class="g-tile wide" data-type="video"><span class="badge">Custom Art</span>
+        <video src="assets/shoe.mp4" muted loop playsinline preload="metadata"></video>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COVER-UPS · VORHER / NACHHER ==================== -->
+<section id="coverups">
+  <div class="shell">
+    <div class="section-head cu-head">
+      <h2 class="h-lg h-hero fade">Cover-Ups</h2>
+      <p class="cu-sub fade"><strong>Aus alt wird eigen.</strong> Ein Cover-Up überdeckt nicht nur – es baut aus der alten Linie eine neue Form. Zieh den Griff, um zu sehen, womit wir angefangen haben.</p>
+    </div>
+
+    <div class="cu-grid" id="cuGrid"></div>
+    <p class="cu-hint" id="cuHint" hidden>Griff ziehen oder wischen</p>
+  </div>
+</section>
+
+<!-- ==================== ABLAUF + FAQ ==================== -->
+<section id="ablauf">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-r">So läuft's</span>
+      <h2 class="h-lg fly fly-r">Von der Idee zur Haut</h2>
+    </div>
+    <div class="steps fade">
+      <div class="step"><span class="n">Schritt 01</span><h3>Anfrage</h3><p>Schick uns deine Idee, Größe und Wunschstelle übers Formular.</p></div>
+      <div class="step"><span class="n">Schritt 02</span><h3>Beratung & Design</h3><p>Wir entwerfen gemeinsam dein individuelles Motiv.</p></div>
+      <div class="step"><span class="n">Schritt 03</span><h3>Termin & Tattoo</h3><p>Entspannter Termin im Atelier – sauber, ehrlich, mit Zeit.</p></div>
+      <div class="step"><span class="n">Schritt 04</span><h3>Aftercare</h3><p>Klare Pflegehinweise, damit dein Tattoo perfekt heilt.</p></div>
+    </div>
+    <div class="faq fade">
+      <div class="faq-item"><button class="faq-q"><span>Ab welchem Alter kann ich mich tätowieren lassen?</span><span class="ico">+</span></button><div class="faq-a"><p>Ab 18 Jahren mit gültigem Ausweis. Minderjährige tätowieren wir grundsätzlich nicht.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Muss ich eine Anzahlung leisten?</span><span class="ico">+</span></button><div class="faq-a"><p>Für Terminreservierung und Design ist eine Anzahlung üblich, die mit dem Endpreis verrechnet wird.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Was kostet ein Tattoo?</span><span class="ico">+</span></button><div class="faq-a"><p>Abhängig von Größe und Aufwand. Nach deiner Anfrage bekommst du eine transparente Einschätzung.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Kann ich mein eigenes Motiv mitbringen?</span><span class="ico">+</span></button><div class="faq-a"><p>Klar – bring Referenzen mit, wir entwickeln daraus ein individuelles Design.</p></div></div>
+      <div class="faq-item"><button class="faq-q"><span>Wie pflege ich mein frisches Tattoo?</span><span class="ico">+</span></button><div class="faq-a"><p>Sauber halten, nicht kratzen, kein Sonnenbad und keine Sauna in der Heilphase.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BEWERTUNGEN ==================== -->
+<section id="bewertungen">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-l">Stimmen</span>
+      <h2 class="h-lg fly fly-l">Was Kunden sagen</h2>
+    </div>
+    <div class="review-grid fade">
+      <div class="review"><div class="stars">★★★★★</div><p>„Super Beratung, absolut sauber gearbeitet. Komme definitiv wieder."</p><cite>— A. K., Hagen</cite></div>
+      <div class="review"><div class="stars">★★★★★</div><p>„Endlich ein Studio, das sich Zeit nimmt. Genau so umgesetzt wie gewünscht."</p><cite>— J. R., Dortmund</cite></div>
+      <div class="review"><div class="stars">★★★★★</div><p>„Angenehme Atmosphäre, ehrliche Beratung und Blackwork, das jeden umhaut."</p><cite>— M. S., Wuppertal</cite></div>
+    </div>
+    <div class="reviews-cta fade"><a class="btn" href="https://www.google.com/search?q=58+Tattooatelier+Hagen" target="_blank" rel="noopener">Auf Google bewerten</a></div>
+  </div>
+</section>
+
+<!-- ==================== INSTAGRAM ==================== -->
+<section id="instagram">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-r">Social</span>
+      <h2 class="h-lg fly fly-r">Neue Arbeiten & freie Termine<br>zuerst auf Instagram</h2>
+    </div>
+    <div class="insta-cta fade">
+      <a class="ig-btn" href="https://www.instagram.com/58tattooatelier/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="igB" x1="0" y1="24" x2="24" y2="0"><stop offset="0" stop-color="#f58529"/><stop offset=".45" stop-color="#dd2a7b"/><stop offset="1" stop-color="#515bd4"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" stroke="url(#igB)" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="url(#igB)" stroke-width="1.7"/><circle cx="17.5" cy="6.5" r="1.1" fill="url(#igB)"/></svg>
+        @58tattooatelier
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TERMIN ==================== -->
+<section id="termin">
+  <div class="shell booking-grid">
+    <div>
+      <span class="eyebrow fly fly-l">Termin</span>
+      <h2 class="h-lg fly fly-l">Lass uns starten</h2>
+      <p class="lede fade">Schick uns deine Idee – wir melden uns zeitnah zurück.</p>
+    </div>
+    <div class="fade">
+      <form id="bookingForm" novalidate>
+        <div class="row-2">
+          <div class="field"><label for="bf-name">Name <span class="req">*</span></label><input id="bf-name" name="name" required></div>
+          <div class="field"><label for="bf-phone">Telefon</label><input id="bf-phone" name="phone" type="tel"></div>
+        </div>
+        <div class="field"><label for="bf-email">E-Mail <span class="req">*</span></label><input id="bf-email" name="email" type="email" required></div>
+        <div class="row-2">
+          <div class="field"><label for="bf-style">Stil</label>
+            <select id="bf-style" name="style">
+              <option>Blackwork</option><option>Fineline</option><option>Realistic</option>
+              <option>Lettering</option><option>Ornamental</option><option>Cover-up</option><option>Custom</option>
+            </select>
+          </div>
+          <div class="field"><label for="bf-place">Körperstelle</label><input id="bf-place" name="place"></div>
+        </div>
+        <div class="field"><label for="bf-msg">Beschreibung deines Motivs <span class="req">*</span></label><textarea id="bf-msg" name="message" required></textarea></div>
+        <div class="consent"><input id="bf-consent" type="checkbox" required>
+          <label for="bf-consent">Ich habe die <a href="#" data-modal="privacy">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+        </div>
+        <button type="submit" class="btn btn-solid">Anfrage per E-Mail senden</button>
+        <p class="form-note">Es öffnet sich dein E-Mail-Programm. Es werden keine Daten auf dieser Website gespeichert.</p>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== KONTAKT ==================== -->
+<section id="kontakt">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow fly fly-r">Kontakt</span>
+      <h2 class="h-lg fly fly-r">Komm vorbei</h2>
+    </div>
+    <div class="contact-grid fade">
+      <div class="contact-info">
+        <div class="ci"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Adresse</b><span>Grimmestraße 17<br>58099 Hagen</span></div></div>
+        <div class="ci"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><div><b>Telefon</b><a href="tel:+491636247797">+49 163 6247797</a></div></div>
+        <div class="ci"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>E-Mail</b><a id="contactMail" href="#">—</a></div></div>
+        <div class="ci"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Öffnungszeiten</b><span>Nach Vereinbarung</span></div></div>
+      </div>
+      <div class="map-wrap" id="mapWrap">
+        <div class="map-consent" id="mapConsent">
+          <p>Für die Karte wird eine Verbindung zu Google Maps aufgebaut. Dabei können Daten an Google übertragen werden.</p>
+          <button class="btn" id="loadMap">Karte laden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand footer-logo">
+        <img src="assets/logo.png" alt="58 Tattooatelier">
+        <p>Individuelle Tattoos, künstlerisches Handwerk. Studio in Hagen.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <a href="#studio">Atelier</a><a href="#galerie">Werke</a><a href="#termin">Termin anfragen</a>
+      </div>
+      <div class="footer-col">
+        <h3>Rechtliches</h3>
+        <button data-modal="imprint">Impressum</button>
+        <button data-modal="privacy">Datenschutz</button>
+        <button data-modal="agb">AGB</button>
+        <a href="https://www.instagram.com/58tattooatelier/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> 58 Tattooatelier · Marius Marco Mondin</p>
+      <div class="legal"><button data-modal="imprint">Impressum</button> · <button data-modal="privacy">Datenschutz</button> · <button data-modal="agb">AGB</button></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Schließen">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Vorheriges">‹</button>
+  <div id="lbContent"></div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Nächstes">›</button>
+</div>
+
+<button class="totop" id="toTop" aria-label="Nach oben">↑</button>
+
+<div class="social-fab" role="group" aria-label="Schnellkontakt">
+  <a href="https://wa.me/491636247797?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Tattoo-%20oder%20Beratungstermin%20bei%2058%20Tattooatelier!" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Per WhatsApp kontaktieren">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.41-1.42a9.87 9.87 0 004.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.04 2zm0 18.11a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 01-1.26-4.34c0-4.52 3.68-8.2 8.24-8.2 4.55 0 8.23 3.68 8.23 8.2 0 4.52-3.68 8.2-8.24 8.2zm4.52-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01a.9.9 0 00-.65.31c-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/58tattooatelier/" target="_blank" rel="noopener" class="fab-instagram" aria-label="Auf Instagram folgen">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><defs><linearGradient id="fabIg" x1="0" y1="24" x2="24" y2="0"><stop offset="0" stop-color="#f58529"/><stop offset=".45" stop-color="#dd2a7b"/><stop offset="1" stop-color="#515bd4"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5" stroke="url(#fabIg)" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="url(#fabIg)" stroke-width="1.7"/><circle cx="17.5" cy="6.5" r="1.1" fill="url(#fabIg)"/></svg>
+  </a>
+</div>
+
+<div class="modal" id="modal-imprint" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Schließen">×</button>
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 DDG</h3>
+    <p><strong>58 Tattooatelier</strong><br>Inhaber: Marius Marco Mondin<br>Grimmestraße 17<br>58099 Hagen<br>Deutschland</p>
+    <h3>Kontakt</h3>
+    <p>Telefon: +49 163 6247797<br>E-Mail: <span class="imp-mail">—</span></p>
+    <h3>Umsatzsteuer-ID</h3>
+    <p>Gemäß § 27a UStG: <strong>folgt</strong>.</p>
+    <h3>Streitschlichtung</h3>
+    <p>OS-Plattform der EU: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Wir nehmen an keinem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</p>
+    <h3>Haftung für Inhalte</h3>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich; zur Überwachung fremder Informationen sind wir nach §§ 8–10 DDG nicht verpflichtet.</p>
+    <h3>Urheberrecht</h3>
+    <p>Inhalte und Werke (insb. Tattoo-Motive, Fotografien) unterliegen dem deutschen Urheberrecht.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-privacy" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Schließen">×</button>
+    <h2>Datenschutzerklärung</h2>
+    <h3>1. Verantwortlicher</h3>
+    <p><strong>Marius Marco Mondin – 58 Tattooatelier</strong><br>Grimmestraße 17, 58099 Hagen<br>Telefon: +49 163 6247797<br>E-Mail: <span class="imp-mail">—</span></p>
+    <h3>2. Hosting</h3>
+    <p>Diese Website wird bei einem externen Dienstleister gehostet. Mit dem Hoster besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.</p>
+    <h3>3. Server-Logfiles</h3>
+    <p>Der Provider erhebt automatisch Informationen (Browsertyp, Betriebssystem, Referrer-URL, IP-Adresse). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <h3>4. Kontaktaufnahme</h3>
+    <p>Das Formular erstellt lediglich eine vorausgefüllte E-Mail in Ihrem eigenen Programm; es werden keine Daten auf dem Server gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b/f DSGVO.</p>
+    <h3>5. Gesundheitsdaten</h3>
+    <p>Besondere Kategorien (Art. 9 DSGVO), z. B. Allergien, verarbeiten wir nur auf Grundlage Ihrer ausdrücklichen Einwilligung – bitte nicht ungefragt im Formular angeben.</p>
+    <h3>6. Cookies & Einwilligung</h3>
+    <p>Externe Dienste (Google Maps, Instagram) laden erst nach Ihrer Zustimmung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG).</p>
+    <h3>7. Google Maps</h3>
+    <p>Anbieter: Google Ireland Limited. Bei Nutzung wird Ihre IP-Adresse an Google übertragen. Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+    <h3>8. Instagram</h3>
+    <p>Anbieter: Meta Platforms Ireland Limited. Beim Aufruf verlinkter Inhalte werden Daten an Meta übertragen.</p>
+    <h3>9. Ihre Rechte</h3>
+    <ul><li>Auskunft (Art. 15)</li><li>Berichtigung (Art. 16)</li><li>Löschung (Art. 17)</li><li>Einschränkung (Art. 18)</li><li>Datenübertragbarkeit (Art. 20)</li><li>Widerspruch (Art. 21)</li></ul>
+    <h3>10. Aufsichtsbehörde</h3>
+    <p>LDI NRW, Kavalleriestraße 2–4, 40213 Düsseldorf – <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">ldi.nrw.de</a>.</p>
+    <h3>11. WhatsApp-Kontakt</h3>
+    <p>Auf unserer Website bieten wir einen Button an, der WhatsApp mit einem vorausgefüllten Text öffnet. Dabei werden von unserer Website selbst keine Daten übertragen oder gespeichert – der Button erzeugt lediglich einen Link. Erst wenn Sie die Nachricht aktiv über Ihre eigene WhatsApp-App versenden, findet eine Datenübertragung statt. Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Meta/WhatsApp: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a>. Rechtsgrundlage für die daraufhin folgende Kontaktaufnahme ist Art. 6 Abs. 1 lit. b/f DSGVO.</p>
+    <h3>12. Aufbewahrungsfristen</h3>
+    <p>Daten aus abgeschlossenen Terminbuchungen bewahren wir aufgrund gesetzlicher steuer- und handelsrechtlicher Aufbewahrungspflichten (u. a. § 147 AO, § 257 HGB) bis zu zehn Jahre auf. Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO. Nach Ablauf der jeweiligen Frist werden die Daten gelöscht oder anonymisiert, sofern keine anderweitige Aufbewahrungspflicht besteht.</p>
+  </div>
+</div>
+
+<!-- ==================== TERMINKALENDER ==================== -->
+<div class="modal" id="modal-calendar" role="dialog" aria-modal="true" aria-labelledby="calTitle">
+  <div class="modal-box cal-box">
+    <button class="modal-close" data-close aria-label="Schließen">×</button>
+    <h2 id="calTitle">Termin anfragen</h2>
+
+    <div class="cal-surface">
+      <div class="cal-nav">
+        <button id="calPrev" aria-label="Vorheriger Monat">‹</button>
+        <strong id="calMonth" aria-live="polite"></strong>
+        <button id="calNext" aria-label="Nächster Monat">›</button>
+      </div>
+      <div class="cal-weekdays" aria-hidden="true">
+        <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-legend">
+        <span class="lg-free"><i></i>Frei – anklickbar</span>
+        <span class="lg-busy"><i></i>Belegt</span>
+      </div>
+    </div>
+
+    <!-- Kontaktformular, klappt beim Klick auf einen freien Tag in 3D auf -->
+    <div class="cal-form" id="calForm">
+      <div class="cal-form-inner">
+        <div class="cal-chosen" id="calChosen"></div>
+
+        <!-- Stornobedingungen-Hinweiskasten -->
+        <div class="cal-terms-box" id="termsBox">
+          <strong>Wichtig:</strong> Deine Anzahlung sichert dir den Termin. Du kannst ihn bis <strong>48 Stunden vorher</strong> kostenlos verschieben oder absagen – die Anzahlung bekommst du dann zurück oder wir übertragen sie auf deinen neuen Termin. Sagst du später ab oder erscheinst nicht, behalten wir die Anzahlung ein. <strong>Grund:</strong> Kurzfristig frei werdende Termine können nicht mehr neu vergeben werden.
+          <div class="cal-terms-checkbox">
+            <input type="checkbox" id="termsCheck" name="terms" aria-describedby="termsBox">
+            <label for="termsCheck">Ich habe die Stornobedingungen gelesen und akzeptiere sie.</label>
+          </div>
+        </div>
+
+        <form id="calRequestForm" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label for="cal-first">Vorname <span class="req">*</span></label>
+              <input id="cal-first" name="first" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="cal-last">Nachname</label>
+              <input id="cal-last" name="last" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label for="cal-email">E-Mail <span class="req">*</span></label>
+              <input id="cal-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cal-insta">Instagram (optional)</label>
+              <input id="cal-insta" name="insta" placeholder="@deinprofil">
+            </div>
+          </div>
+
+          <button type="submit" class="wa-wide" id="calWa">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.41-1.42a9.87 9.87 0 004.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.51 2 12.04 2zm0 18.11a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 01-1.26-4.34c0-4.52 3.68-8.2 8.24-8.2 4.55 0 8.23 3.68 8.23 8.2 0 4.52-3.68 8.2-8.24 8.2zm4.52-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14 0-.31-.01-.47-.01a.9.9 0 00-.65.31c-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+            Marius direkt auf WhatsApp schreiben
+          </button>
+          <p class="cal-note">Öffnet WhatsApp mit deiner Anfrage – zusätzlich wird eine E-Mail an das Atelier vorbereitet.</p>
+          <div class="cal-alt">
+            <button type="button" class="link-arrow" id="calMailOnly">Lieber nur per E-Mail anfragen</button>
+          </div>
+          <p class="cal-status" id="calStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <p class="cal-howto">
+      Blättere mit den Pfeilen oben durch die Monate. Tage mit rotem X sind bereits vergeben.
+      Klick einfach auf einen freien Tag – darunter klappt dann ein kurzes Formular auf.
+      Trag deinen Vornamen und deine E-Mail ein und schick die Anfrage per WhatsApp ab; Marius meldet sich zeitnah bei dir.
+    </p>
+  </div>
+</div>
+
+<!-- ==================== AGB ==================== -->
+<div class="modal" id="modal-agb" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="Schließen">×</button>
+    <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+    <div class="modal-content">
+      <h3>1. Terminbuchung & Buchungsbedingungen</h3>
+      <p>Die Buchung eines Termins auf der Website von 58 Tattooatelier ist verbindlich. Mit der Buchung akzeptierst du diese AGB und die <a href="#" data-modal="privacy">Datenschutzerklärung</a>.</p>
+
+      <h3>2. Anzahlung & Stornobedingungen</h3>
+      <p><strong>Anzahlung:</strong> Die Anzahlung wird fällig nach Bestätigung des Termins durch das Atelier. Sie sichert dir deinen Wunschtermin verbindlich.</p>
+      <p><strong>Stornierung bis 48 Stunden vor dem Termin:</strong> Du kannst deinen Termin kostenfrei stornieren oder verschieben. Die Anzahlung wird dir vollständig erstattet oder auf den neuen Termin übertragen – ganz nach deinem Wunsch.</p>
+      <p><strong>Stornierung weniger als 48 Stunden vor dem Termin:</strong> Die Anzahlung wird einbehalten. Das gilt auch, wenn du dich abmeldest, ohne den Termin vorher zu stornieren, oder wenn du nicht erscheinst.</p>
+      <p><strong>Grund für diese Regelung:</strong> Kurzfristig frei werdende Termine können nicht mehr anderweitig vergeben werden. Die Anzahlung deckt damit den Ausfall des Termins ab.</p>
+
+      <h3>3. Altersvoraussetzung & Ausweispflicht</h3>
+      <p>Die Tätowierung darf nur an Personen über 18 Jahren durchgeführt werden. Gültiger Ausweis (Personalausweis, Reisepass o. ä.) ist erforderlich.</p>
+
+      <h3>4. Ausschlusskriterien</h3>
+      <p>Wir können eine Tätowierung ablehnen, wenn:</p>
+      <ul style="margin-left:1.5rem;margin-top:.5rem;">
+        <li>Du Alkohol, Drogen oder andere Rauschmittel konsumiert hast</li>
+        <li>Du dich unwohl oder krank fühlst</li>
+        <li>Du schwanger bist oder Attest/medizinische Gegebenheiten dagegensprechen</li>
+        <li>Du gesundheitliche Einschränkungen nicht offenlegst</li>
+      </ul>
+
+      <h3>5. Gesundheitliche Verantwortung des Kunden</h3>
+      <p>Du versicherst, dass du keine medizinischen Gegebenheiten hast, die gegen eine Tätowierung sprechen. Dazu gehören (beispielsweise): Blutgerinnungsstörungen, aktive Infektionen, Immunerkrankungen, Allergien gegen Tätowiertinte, Schwangerschaft o. ä.</p>
+      <p><strong>Wichtig:</strong> Bei relevanten Erkrankungen oder Medikamenten, die die Blutgerinnung beeinflussen, ist ein ärztliches Attest erforderlich.</p>
+
+      <h3>6. Nachstech-Termine</h3>
+      <p>Nachstech- oder Nacharbeits-Termine werden nach Absprache gewährt. Dies ist Marius vorbehalten und erfolgt kostenlos oder zu reduzierten Sätzen – je nach Aufwand.</p>
+
+      <h3>7. Gewährleistung & Haftung</h3>
+      <p>Marius arbeitet nach höchsten handwerklichen Standards. Allerdings können wir nicht garantieren, dass ein Motiv zu 100 % deinen Vorstellungen entspricht oder zeitlos bleibt. Allergien gegen Tätowiertinte treten selten, aber nicht ausgeschlossen auf.</p>
+      <p>Wir haften nicht für:</p>
+      <ul style="margin-left:1.5rem;margin-top:.5rem;">
+        <li>Allergische Reaktionen oder Überempfindlichkeiten gegen Tätowiertinte</li>
+        <li>Narbenbildung (hängt von Haut und Wundheilung ab)</li>
+        <li>Blutergüsse oder Schwellungen (normale Reaktionen des Körpers)</li>
+        <li>Mangelnde Nachsorge durch dich (siehe Wundpflege-Anleitung)</li>
+      </ul>
+
+      <h3>8. Nachsorge & Haltbarkeit</h3>
+      <p>Die Haltbarkeit und Optik deines Tattoos hängt maßgeblich von deiner Nachsorge ab. Wir stellen dir genaue Pflegeanweisungen bereit. Wenn du diese nicht befolgst, können wir nicht für Verblassungen oder Infektionen haftbar gemacht werden.</p>
+
+      <h3>9. Fotos & Veröffentlichung</h3>
+      <p>Mit deiner Einwilligung darf Marius Fotos deines fertigen Tattoos zu Portfolio- und Werbezwecken (Website, Instagram, etc.) nutzen. Du kannst dies ablehnen – bitte teile das vor dem Termin mit.</p>
+
+      <h3>10. Datenschutz</h3>
+      <p>Deine Daten werden gemäß unserer <a href="#" data-modal="privacy">Datenschutzerklärung</a> verarbeitet. Für Terminbuchungen speichern wir deine Angaben zur Kontaktaufnahme und gemäß Aufbewahrungsfristen.</p>
+
+      <h3>11. Salvatorische Klausel</h3>
+      <p>Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt der Rest dieser AGB gültig. Ungültige Bestimmungen werden durch gültige ersetzt, die dem Sinn und Zweck des Ursprünglichen entsprechen.</p>
+
+      <h3>12. Rechtsprechung</h3>
+      <p>Es gilt deutsches Recht. Gerichtsstand ist Hagen (Westfalen), sofern nicht zwingende gesetzliche Regelungen anderes vorsehen.</p>
+
+      <p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--ash);">
+        <strong>Fragen?</strong> Kontaktiere uns vor der Buchung. Alle Fragen werden beantwortet – Marius nimmt sich Zeit!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie-Hinweis">
+  <h4>Datenschutz-Einstellungen</h4>
+  <p>Wir laden externe Dienste (Google Maps, Instagram) erst nach Ihrer Zustimmung. Mehr in der <a href="#" data-modal="privacy">Datenschutzerklärung</a>.</p>
+  <div class="cookie-btns">
+    <button class="btn btn-solid" id="ckAll">Alle akzeptieren</button>
+    <button class="btn" id="ckNec">Nur notwendige</button>
+  </div>
+</div>
+
+<script>
+const CONTACT_EMAIL = "info@58tattooatelier.de";
+document.getElementById('contactMail').textContent = CONTACT_EMAIL;
+document.getElementById('contactMail').href = 'mailto:'+CONTACT_EMAIL;
+document.querySelectorAll('.imp-mail').forEach(e=>e.textContent=CONTACT_EMAIL);
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Logo-Animation läuft jetzt per CSS (3.5s Scale-Animation) */
+const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Nav scroll state + mobile toggle */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',scrollY>120);
+  document.getElementById('toTop').classList.toggle('show',scrollY>600);
+},{passive:true});
+const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');navToggle.classList.toggle('open',o);navToggle.setAttribute('aria-expanded',o);});
+navLinks.querySelectorAll('.nav-item>a').forEach(a=>a.addEventListener('click',()=>{
+  if(innerWidth<=920){navLinks.classList.remove('open');navToggle.classList.remove('open');}
+}));
+document.getElementById('toTop').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+/* Scroll-Reveal für .fly und .fade */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.15});
+document.querySelectorAll('.fly,.fade').forEach(el=>io.observe(el));
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.closest('.faq-item'), a=item.querySelector('.faq-a');
+    const open=item.classList.toggle('open');
+    a.style.maxHeight = open ? a.scrollHeight+'px' : 0;
+  });
+});
+
+/* ============================================================
+   GALERIE: Slideshow (Standard) <-> einfache Rasteransicht
+   ============================================================ */
+(function(){
+  const wrap = document.getElementById('slideshowWrap');
+  const grid = document.getElementById('gallery');
+  const btnSlideshow = document.getElementById('viewSlideshow');
+  const btnGrid = document.getElementById('viewGrid');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function showGrid(){
+    wrap.classList.add('hidden'); grid.classList.add('active');
+    btnSlideshow.setAttribute('aria-pressed','false'); btnGrid.setAttribute('aria-pressed','true');
+    stopAuto();
+  }
+  function showSlideshow(){
+    wrap.classList.remove('hidden'); grid.classList.remove('active');
+    btnSlideshow.setAttribute('aria-pressed','true'); btnGrid.setAttribute('aria-pressed','false');
+    startAuto();
+  }
+  btnSlideshow.addEventListener('click', showSlideshow);
+  btnGrid.addEventListener('click', showGrid);
+
+  /* ---- 3D-Exploded-View-Karussell ----
+     Jedes Bild bekommt je nach Abstand zur Mitte eine Positionsklasse.
+     Der Abstand wird "rundherum" gerechnet, damit der Ring nahtlos ist. */
+  const stage = document.getElementById('slideshow');
+  const slides = [...stage.querySelectorAll('.slide')];
+  const dotsWrap = document.getElementById('slideDots');
+  let idx = 0, timer = null, playing = true;
+
+  slides.forEach((s,i)=>{
+    const d = document.createElement('button');
+    d.setAttribute('aria-label','Bild '+(i+1)+' von '+slides.length);
+    d.setAttribute('aria-current', i===0 ? 'true' : 'false');
+    d.addEventListener('click', ()=>goTo(i, true));
+    dotsWrap.appendChild(d);
+    /* Klick auf einen Nachbarn holt ihn in die Mitte */
+    s.addEventListener('click', ()=>{ if(i!==idx) goTo(i, true); });
+  });
+  const dots = [...dotsWrap.children];
+
+  function layout(){
+    const n = slides.length;
+    slides.forEach((s,i)=>{
+      let d = (i - idx + n) % n;          // 0,1,2 ... n-1
+      if(d > n/2) d -= n;                 // -> -2,-1,0,1,2
+      s.className = 'slide ' + (Math.abs(d) > 2 ? 'is-far'
+        : d===0 ? 'is-c' : d===1 ? 'is-r1' : d===2 ? 'is-r2' : d===-1 ? 'is-l1' : 'is-l2');
+      s.setAttribute('aria-hidden', d===0 ? 'false' : 'true');
+    });
+    dots.forEach((d,i)=>d.setAttribute('aria-current', i===idx ? 'true':'false'));
+  }
+
+  function goTo(next, userTriggered){
+    const n = slides.length;
+    idx = ((next % n) + n) % n;
+    layout();
+    if(userTriggered) restartAuto();
+  }
+  function nextSlide(){ goTo(idx+1); }
+  document.getElementById('slideNext').addEventListener('click', ()=>goTo(idx+1, true));
+  document.getElementById('slidePrev').addEventListener('click', ()=>goTo(idx-1, true));
+
+  /* Wischen auf Touchgeraeten */
+  let tx = 0, ty = 0, swiping = false;
+  stage.addEventListener('touchstart', e=>{
+    tx = e.touches[0].clientX; ty = e.touches[0].clientY; swiping = true;
+  }, {passive:true});
+  stage.addEventListener('touchend', e=>{
+    if(!swiping) return; swiping = false;
+    const dx = e.changedTouches[0].clientX - tx;
+    const dy = e.changedTouches[0].clientY - ty;
+    if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) goTo(idx + (dx < 0 ? 1 : -1), true);
+  });
+
+  layout();
+
+  function startAuto(){ if(reduceMotion || !playing) return; stopAuto(); timer = setInterval(nextSlide, 4500); }
+  function stopAuto(){ if(timer){ clearInterval(timer); timer=null; } }
+  function restartAuto(){ if(playing) startAuto(); }
+
+  const playBtn = document.getElementById('slidePlay');
+  playBtn.addEventListener('click', ()=>{
+    playing = !playing;
+    playBtn.textContent = playing ? '❚❚' : '▶';
+    playBtn.setAttribute('aria-label', playing ? 'Diashow pausieren' : 'Diashow abspielen');
+    if(playing) startAuto(); else stopAuto();
+  });
+
+  /* Pausiert automatisch bei Hover/Fokus (Barrierefreiheit) und wenn der Tab nicht sichtbar ist */
+  wrap.addEventListener('mouseenter', stopAuto);
+  wrap.addEventListener('mouseleave', restartAuto);
+  wrap.addEventListener('focusin', stopAuto);
+  wrap.addEventListener('focusout', restartAuto);
+  document.addEventListener('visibilitychange', ()=>{ if(document.hidden) stopAuto(); else restartAuto(); });
+
+  /* Tastatur: Pfeile innerhalb der Slideshow */
+  document.getElementById('slideshow').addEventListener('keydown', e=>{
+    if(e.key==='ArrowRight') goTo(idx+1, true);
+    if(e.key==='ArrowLeft') goTo(idx-1, true);
+  });
+
+  /* Barrierefreiheit: bei reduzierter Bewegung startet automatisch die ruhige Rasteransicht.
+     Erst jetzt aufrufen, da hier alle Variablen (idx/timer/playing) bereits initialisiert sind. */
+  if(reduceMotion){ showGrid(); } else { showSlideshow(); }
+})();
+
+/* Lightbox (Bilder + Video) */
+const tiles=[...document.querySelectorAll('#gallery .g-tile')];
+const lb=document.getElementById('lightbox'), lbContent=document.getElementById('lbContent');
+let lbIndex=0;
+function renderLb(i){
+  lbIndex=(i+tiles.length)%tiles.length;
+  const t=tiles[lbIndex];
+  lbContent.innerHTML='';
+  if(t.dataset.type==='video'){
+    const v=document.createElement('video');
+    v.src=t.querySelector('video').src; v.controls=true; v.autoplay=true; v.loop=true; v.playsInline=true;
+    lbContent.appendChild(v);
+  } else {
+    const img=document.createElement('img');
+    img.src=t.querySelector('img').src; img.alt=t.querySelector('img').alt;
+    lbContent.appendChild(img);
+  }
+  lb.classList.add('open');
+}
+tiles.forEach((t,i)=>t.addEventListener('click',()=>renderLb(i)));
+document.getElementById('lbClose').addEventListener('click',()=>{lb.classList.remove('open');lbContent.innerHTML='';});
+document.getElementById('lbNext').addEventListener('click',()=>renderLb(lbIndex+1));
+document.getElementById('lbPrev').addEventListener('click',()=>renderLb(lbIndex-1));
+lb.addEventListener('click',e=>{if(e.target===lb){lb.classList.remove('open');lbContent.innerHTML='';}});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape'){lb.classList.remove('open');lbContent.innerHTML='';}
+  if(e.key==='ArrowRight')renderLb(lbIndex+1); if(e.key==='ArrowLeft')renderLb(lbIndex-1);});
+
+/* Modals */
+function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModals(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'));document.body.style.overflow='';}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-modal]'); if(t){e.preventDefault();openModal(t.dataset.modal);return;}
+  if(e.target.matches('[data-close]')||e.target.classList.contains('modal'))closeModals();
+});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModals();});
+
+/* Cookie + Maps */
+const cookie=document.getElementById('cookie');
+let consent=null; try{consent=localStorage.getItem('consent58atelier');}catch(e){}
+if(!consent) setTimeout(()=>cookie.classList.add('show'),900);
+function setConsent(v){try{localStorage.setItem('consent58atelier',v);}catch(e){} cookie.classList.remove('show'); if(v==='all')loadMap();}
+document.getElementById('ckAll').addEventListener('click',()=>setConsent('all'));
+document.getElementById('ckNec').addEventListener('click',()=>setConsent('necessary'));
+function loadMap(){
+  const wrap=document.getElementById('mapWrap'); if(wrap.querySelector('iframe'))return;
+  const ifr=document.createElement('iframe');
+  ifr.src="https://www.google.com/maps?q=Grimmestra%C3%9Fe+17,+58099+Hagen&output=embed";
+  ifr.loading="lazy"; ifr.title="Standort 58 Tattooatelier";
+  document.getElementById('mapConsent')?.remove();
+  wrap.appendChild(ifr);
+}
+document.getElementById('loadMap').addEventListener('click',()=>{setConsent('all');loadMap();});
+if(consent==='all')loadMap();
+
+/* ============================================================
+   TERMINKALENDER
+   ============================================================ */
+(function(){
+  const grid = document.getElementById('calGrid');
+  if(!grid) return;
+
+  /* ==========================================================
+     >>>>>>  EINZIGE DATENQUELLE FÜR BELEGTE TAGE  <<<<<<
+     ----------------------------------------------------------
+     HIER SPÄTER DIE ECHTE CalDAV-ANBINDUNG AN MARIUS' APPLE-
+     iCLOUD-KALENDER EINSETZEN.
+
+     Die Kalender-Optik muss dafür NICHT angefasst werden:
+     getBlockedDates() ist die einzige Stelle, die der Kalender
+     nach belegten Tagen fragt. Der Rückgabewert darf ein Array
+     ODER ein Promise sein - der Aufrufer wickelt beides ab.
+
+     Erwartetes Format: Datumsstrings "JJJJ-MM-TT".
+
+     Später also z. B. so:
+       function getBlockedDates(){
+         return fetch('/api/belegte-tage')      // Backend fragt CalDAV ab
+           .then(r => r.json());                // -> ["2026-08-23", ...]
+       }
+
+     Bis dahin: feste Testdaten, einfach hier pflegen.
+     ========================================================== */
+  const BELEGTE_TAGE_TEST = [
+    '2026-08-23',   // vom Kunden vorgegeben
+    '2026-08-24',
+    '2026-08-29',
+    '2026-09-05',
+    '2026-09-06',
+    '2026-09-17'
+  ];
+
+  function getBlockedDates(){
+    return BELEGTE_TAGE_TEST;
+  }
+  /* ====== Ende der austauschbaren Datenquelle ====== */
+
+  const MONATE = ['Januar','Februar','März','April','Mai','Juni',
+                  'Juli','August','September','Oktober','November','Dezember'];
+
+  const monthLabel = document.getElementById('calMonth');
+  const btnPrev  = document.getElementById('calPrev');
+  const btnNext  = document.getElementById('calNext');
+  const formWrap = document.getElementById('calForm');
+  const chosenEl = document.getElementById('calChosen');
+  const statusEl = document.getElementById('calStatus');
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  let view = new Date(today.getFullYear(), today.getMonth(), 1);
+  let blocked = [];
+  let selected = null;   // 'JJJJ-MM-TT'
+
+  const key = d => d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' +
+    String(d.getDate()).padStart(2,'0');
+
+  const human = iso => {
+    const [y,m,d] = iso.split('-').map(Number);
+    const dt = new Date(y, m-1, d);
+    const wt = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'][dt.getDay()];
+    return wt + ', ' + d + '. ' + MONATE[m-1] + ' ' + y;
+  };
+
+  function render(){
+    monthLabel.textContent = MONATE[view.getMonth()] + ' ' + view.getFullYear();
+    /* Nicht in die Vergangenheit blättern */
+    btnPrev.disabled = view.getFullYear() === today.getFullYear() && view.getMonth() === today.getMonth();
+
+    grid.innerHTML = '';
+    const first = new Date(view.getFullYear(), view.getMonth(), 1);
+    const offset = (first.getDay() + 6) % 7;          // Montag = 0
+    const days = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+
+    for(let i=0; i<offset; i++){
+      const pad = document.createElement('div');
+      pad.className = 'cal-cell is-empty';
+      grid.appendChild(pad);
+    }
+
+    for(let d=1; d<=days; d++){
+      const date = new Date(view.getFullYear(), view.getMonth(), d);
+      const iso  = key(date);
+      const isPast    = date < today;
+      const isBlocked = blocked.indexOf(iso) !== -1;
+      const isFree    = !isPast && !isBlocked;
+
+      const cell = document.createElement(isFree ? 'button' : 'div');
+      cell.className = 'cal-cell' + (isPast ? ' is-past' : '') +
+                       (isBlocked ? ' is-blocked' : '') +
+                       (isFree ? ' is-free' : '') +
+                       (iso === key(today) ? ' is-today' : '') +
+                       (iso === selected ? ' is-sel' : '');
+      cell.textContent = d;
+
+      if(isFree){
+        cell.type = 'button';
+        cell.dataset.tip = 'Tag frei – jetzt anfragen';
+        cell.setAttribute('aria-label', human(iso) + ' – frei, jetzt anfragen');
+        cell.addEventListener('click', () => choose(iso));
+      } else if(isBlocked){
+        cell.setAttribute('aria-label', human(iso) + ' – bereits belegt');
+        cell.insertAdjacentHTML('beforeend',
+          '<svg class="cal-x" viewBox="0 0 40 40" aria-hidden="true">' +
+          '<path d="M7.5 6.5 C14 13.5, 25.5 24.5, 33 33.5"/>' +
+          '<path d="M32.5 7 C26 14, 14.5 25.5, 6.5 33"/>' +
+          '</svg>');
+      } else {
+        cell.setAttribute('aria-label', human(iso) + ' – vergangen');
+      }
+      grid.appendChild(cell);
+    }
+  }
+
+  function choose(iso){
+    selected = iso;
+    render();
+    chosenEl.textContent = 'Dein Wunschtermin: ' + human(iso);
+    formWrap.classList.add('open');
+    statusEl.textContent = '';
+    /* Formular in den Blick rücken und Fokus setzen (Tastaturbedienung) */
+    setTimeout(() => {
+      formWrap.scrollIntoView({behavior:'smooth', block:'nearest'});
+      document.getElementById('cal-first').focus();
+    }, 220);
+  }
+
+  btnPrev.addEventListener('click', () => { view.setMonth(view.getMonth()-1); render(); });
+  btnNext.addEventListener('click', () => { view.setMonth(view.getMonth()+1); render(); });
+
+  /* Promise.resolve() -> funktioniert mit dem heutigen Array genauso
+     wie mit einer späteren asynchronen CalDAV-Abfrage. */
+  Promise.resolve(getBlockedDates())
+    .then(list => { blocked = Array.isArray(list) ? list : []; })
+    .catch(() => { blocked = []; })
+    .then(render);
+
+  /* ---- Absenden ---- */
+  const form = document.getElementById('calRequestForm');
+
+  function daten(){
+    return {
+      vorname:  document.getElementById('cal-first').value.trim(),
+      nachname: document.getElementById('cal-last').value.trim(),
+      email:    document.getElementById('cal-email').value.trim(),
+      insta:    document.getElementById('cal-insta').value.trim()
+    };
+  }
+
+  function pruefen(d){
+    if(!d.vorname){ document.getElementById('cal-first').focus(); statusEl.textContent = 'Bitte trag deinen Vornamen ein.'; return false; }
+    if(!d.email || !/^\S+@\S+\.\S+$/.test(d.email)){ document.getElementById('cal-email').focus(); statusEl.textContent = 'Bitte trag eine gültige E-Mail-Adresse ein.'; return false; }
+    if(!selected){ statusEl.textContent = 'Bitte wähle zuerst einen freien Tag aus.'; return false; }
+    const termsCheck = document.getElementById('termsCheck');
+    if(!termsCheck || !termsCheck.checked){
+      statusEl.textContent = 'Bitte akzeptiere die Stornobedingungen, um fortzufahren.';
+      termsCheck?.focus();
+      return false;
+    }
+    return true;
+  }
+
+  /* ==========================================================
+     BENACHRICHTIGUNG AN DAS ATELIER
+     ----------------------------------------------------------
+     HIER SPÄTER DIE ECHTE BACKEND-ANBINDUNG EINSETZEN, z. B.:
+       return fetch('/api/anfrage', {
+         method:'POST',
+         headers:{'Content-Type':'application/json'},
+         body: JSON.stringify({...d, datum:selected})
+       });
+
+     Solange es kein Backend gibt, bereiten wir eine E-Mail im
+     Mailprogramm des Besuchers vor (mailto-Fallback). Das kann
+     der Browser nicht garantiert abschicken - es ist bewusst
+     nur eine Zwischenlösung.
+     ========================================================== */
+  function benachrichtigeStudio(d){
+    const betreff = 'Terminanfrage ' + human(selected) + ' – ' + d.vorname + (d.nachname ? ' ' + d.nachname : '');
+    const text =
+      'Neue Terminanfrage über die Website\n\n' +
+      'Wunschtermin: ' + human(selected) + '\n' +
+      'Vorname: ' + d.vorname + '\n' +
+      'Nachname: ' + (d.nachname || '–') + '\n' +
+      'E-Mail: ' + d.email + '\n' +
+      'Instagram: ' + (d.insta || '–') + '\n';
+    location.href = 'mailto:' + CONTACT_EMAIL +
+      '?subject=' + encodeURIComponent(betreff) +
+      '&body=' + encodeURIComponent(text);
+  }
+
+  /* WhatsApp-Text: bewusst NUR Vorname + gewähltes Datum. */
+  function whatsappLink(d){
+    const msg = 'Hallo, hier ist ' + d.vorname + '. Ich interessiere mich für einen Termin am ' +
+                human(selected) + ' bei 58 Tattooatelier!';
+    return 'https://wa.me/491636247797?text=' + encodeURIComponent(msg);
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = daten();
+    if(!pruefen(d)) return;
+    /* WhatsApp in neuem Tab, damit die Seite offen bleibt ... */
+    window.open(whatsappLink(d), '_blank', 'noopener');
+    /* ... danach die E-Mail an das Atelier vorbereiten. */
+    benachrichtigeStudio(d);
+    statusEl.textContent = 'WhatsApp wurde geöffnet und eine E-Mail an das Atelier vorbereitet.';
+  });
+
+  document.getElementById('calMailOnly').addEventListener('click', () => {
+    const d = daten();
+    if(!pruefen(d)) return;
+    benachrichtigeStudio(d);
+    statusEl.textContent = 'Dein E-Mail-Programm öffnet sich…';
+  });
+})();
+
+/* Formular -> mailto */
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target, status=document.getElementById('formStatus');
+  for(const n of ['name','email','message']){ if(!f[n].value.trim()){f[n].focus();status.textContent='Bitte Pflichtfelder ausfüllen.';return;} }
+  if(!f.querySelector('#bf-consent').checked){status.textContent='Bitte der Datenschutzerklärung zustimmen.';return;}
+  const subject=`Tattoo-Anfrage: ${f.name.value}`;
+  const body=`Name: ${f.name.value}\nE-Mail: ${f.email.value}\nTelefon: ${f.phone.value}\nStil: ${f.style.value}\nKörperstelle: ${f.place.value}\n\nBeschreibung:\n${f.message.value}`;
+  location.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  status.textContent='Dein E-Mail-Programm öffnet sich…';
+});
+</script>
+
+<!-- ==================== COVER-UPS · Logik ==================== -->
+<script>
+(function(){
+  const grid = document.getElementById('cuGrid');
+  const hint = document.getElementById('cuHint');
+  if(!grid) return;
+
+  /* Bilder liegen fortlaufend nummeriert in assets/coverups/:
+     01 = vorher, 02 = nachher (erstes Paar), 03/04 (zweites Paar) usw.
+     Das Skript zaehlt hoch, bis eine Nummer fehlt. Neue Bilder
+     reinlegen und hochladen reicht - hier muss nichts geaendert werden. */
+  const ORDNER    = 'assets/coverups/';
+  const ENDUNGEN  = ['jpg','jpeg','JPG','png','webp'];
+  const MAX_PAARE = 60;
+
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.15});
+
+  // Optionale Bildunterschriften: assets/coverups/texte.json
+  // { "01": { "titel": "Lilien und Falter", "detail": "Unterschenkel" } }
+  let texte = {};
+  fetch(ORDNER + 'texte.json', {cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : {}; })
+    .catch(function(){ return {}; })
+    .then(function(t){ texte = t || {}; return sammeln(); })
+    .then(function(paare){
+      if(!paare.length){
+        grid.innerHTML = '<p class="cu-empty">Cover-Ups werden gerade vorbereitet.</p>';
+        return;
+      }
+      paare.forEach(aufbauen);
+      hint.hidden = false;
+    });
+
+  function nr(n){ return n < 10 ? '0' + n : String(n); }
+
+  /* Sucht die Datei zu einer Nummer - probiert alle Endungen durch. */
+  function bildSuchen(n){
+    let i = 0;
+    return new Promise(function(fertig){
+      (function versuchen(){
+        if(i >= ENDUNGEN.length) return fertig(null);
+        const pfad = ORDNER + nr(n) + '.' + ENDUNGEN[i++];
+        const img = new Image();
+        img.onload  = function(){ fertig(pfad); };
+        img.onerror = versuchen;
+        img.src = pfad;
+      })();
+    });
+  }
+
+  function sammeln(){
+    const paare = [];
+    let n = 1;
+    return (function weiter(){
+      if(n > MAX_PAARE * 2) return Promise.resolve(paare);
+      const a = n, b = n + 1;
+      return Promise.all([bildSuchen(a), bildSuchen(b)]).then(function(res){
+        if(!res[0] || !res[1]) return paare;   // Luecke = Ende der Reihe
+        const t = texte[nr(a)] || {};
+        paare.push({
+          vorher:  res[0],
+          nachher: res[1],
+          titel:   t.titel  || '',
+          detail:  t.detail || ''
+        });
+        n += 2;
+        return weiter();
+      });
+    })();
+  }
+
+  function aufbauen(item){
+    const bez = item.titel || 'Cover-Up';
+    const fig = document.createElement('figure');
+    fig.className = 'cu-item fade';
+    fig.innerHTML =
+      '<div class="cu-slider" style="--pos:0%" tabindex="0" role="slider"' +
+      ' aria-label="Vergleich ' + esc(bez) + ': vorher und nachher"' +
+      ' aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">' +
+        '<img class="cu-before" src="' + item.vorher + '" alt="' + esc(bez) + ' vor dem Cover-Up">' +
+        '<img class="cu-after" src="' + item.nachher + '" alt="' + esc(bez) + ' nach dem Cover-Up">' +
+        '<span class="cu-tag cu-tag-before">Vorher</span>' +
+        '<span class="cu-tag cu-tag-after">Nachher</span>' +
+        '<div class="cu-divider"></div>' +
+        '<div class="cu-handle"><i></i><i></i></div>' +
+      '</div>' +
+      (item.titel || item.detail
+        ? '<figcaption class="cu-caption"><h3>' + esc(item.titel) + '</h3>' +
+          '<span>' + esc(item.detail) + '</span></figcaption>'
+        : '');
+    grid.appendChild(fig);
+    io.observe(fig);
+    slider(fig.querySelector('.cu-slider'));
+  }
+
+  function slider(el){
+    const tagV = el.querySelector('.cu-tag-before');
+    const tagN = el.querySelector('.cu-tag-after');
+    let zieht = false;
+
+    function setzen(p){
+      p = Math.max(0, Math.min(100, p));
+      el.style.setProperty('--pos', p + '%');
+      el.setAttribute('aria-valuenow', Math.round(p));
+      tagN.style.opacity = p < 14 ? 0 : 1;
+      tagV.style.opacity = p > 86 ? 0 : 1;
+    }
+    function ausEvent(e){
+      const r = el.getBoundingClientRect();
+      const x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+      return (x / r.width) * 100;
+    }
+    function start(e){ zieht = true; el.classList.add('is-active'); setzen(ausEvent(e)); }
+    function move(e){ if(!zieht) return; if(e.cancelable) e.preventDefault(); setzen(ausEvent(e)); }
+    function ende(){ zieht = false; el.classList.remove('is-active'); }
+
+    el.addEventListener('mousedown', start);
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', ende);
+    el.addEventListener('touchstart', start, {passive:true});
+    window.addEventListener('touchmove', move, {passive:false});
+    window.addEventListener('touchend', ende);
+    el.addEventListener('keydown', function(e){
+      const jetzt = parseFloat(el.getAttribute('aria-valuenow'));
+      if(e.key === 'ArrowLeft'){  setzen(jetzt - 4); e.preventDefault(); }
+      if(e.key === 'ArrowRight'){ setzen(jetzt + 4); e.preventDefault(); }
+    });
+    setzen(0);
+  }
+
+  function esc(t){
+    return String(t || '').replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+})();
+</script>
+</body>
+</html>
