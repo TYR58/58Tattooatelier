@@ -1670,5 +1670,12 @@ document.getElementById('bookingForm').addEventListener('submit',function(e){
   }
 })();
 </script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .catch(err => console.log('SW Fehler:', err));
+  }
+</script>
 </body>
 </html>

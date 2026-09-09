@@ -52,6 +52,7 @@
     document.getElementById('btnInstagram').addEventListener('click', () => { window.open('https://instagram.com/58tattooatelier', '_blank'); });
     document.getElementById('btnInstagramMmm').addEventListener('click', () => { window.open('https://www.instagram.com/mmm.tattoo/', '_blank'); });
     document.getElementById('btnWebsite').addEventListener('click', () => { window.open('https://58tattooatelier.de', '_blank'); });
+        if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js', { scope: '/' }).catch(err => console.log('SW:', err)); }
     document.getElementById('btnReview').addEventListener('click', () => { window.open('https://www.google.com/search?q=58+tattooatelier', '_blank'); });
   </script>
 </body>
