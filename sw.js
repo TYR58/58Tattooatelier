@@ -1,21 +1,13 @@
-const CACHE_VERSION = 'v' + new Date().toISOString().split('T')[0];
-const CACHE_NAME = `58-tattoo-${CACHE_VERSION}`;
+const CACHE_VERSION = 'v' + Date.now();
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(self.skipWaiting());
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => self.clients.claim())
+    caches.keys().then((names) => Promise.all(names.map(name => caches.delete(name))))
+      .then(() => self.clients.claim())
   );
 });
 
@@ -23,16 +15,12 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, { cache: 'no-store' })
       .then((response) => {
-        const responseClone = response.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+        const clone = response.clone();
+        caches.open(CACHE_VERSION).then((cache) => cache.put(event.request, clone));
         return response;
       })
-      .catch(() => {
-        return caches.match(event.request);
-      })
+      .catch(() => caches.match(event.request))
   );
 });
