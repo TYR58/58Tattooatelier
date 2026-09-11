@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>58 Tattooatelier – Kontakt</title>
-  <link rel="icon" href="../assets/58-logo.png">
+  <link rel="icon" href="../assets/logo.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --gold: #c9a24b; --gold-hi: #f4e2a6; --bone: #ece6da; --pit: #0a0e0c; }
@@ -37,23 +37,86 @@
   <div class="container">
     <img src="../assets/58-logo.png" alt="58 Tattooatelier" class="logo">
     <div class="buttons">
-      <button class="btn" id="btnWhatsApp">WhatsApp schreiben</button>
-      <button class="btn" id="btnCall">Anrufen +49 163 624 77 97</button>
-      <button class="btn" id="btnInstagram">@58tattooatelier</button>
-      <button class="btn" id="btnInstagramMmm">@mmm.tattoo</button>
-      <button class="btn" id="btnWebsite">Zur Website</button>
-      <button class="btn" id="btnReview">Bewertung schreiben</button>
+      <button class="btn" id="btnVCard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 11h.01M8 15h8"/></svg>
+        Kontakt speichern
+      </button>
+      <button class="btn" id="btnWhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.563.946-2.846 2.351-3.707 3.957 1.584-1.068 3.522-1.846 5.632-2.133 2.111-.287 4.328-.083 6.487.724-1.326-1.787-3.291-3.013-5.377-3.926z"/></svg>
+        WhatsApp schreiben
+      </button>
+      <button class="btn" id="btnCall">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Anrufen
+      </button>
+      <button class="btn" id="btnInstagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        58tattooatelier | Instagram
+      </button>
+      <button class="btn" id="btnInstagramMmm">
+        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        mmm.tattoo | Instagram
+      </button>
+      <button class="btn" id="btnWebsite">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c-2.667 3.333-2.667 6.667 0 10M12 2c2.667 3.333 2.667 6.667 0 10"/></svg>
+        Zur Website
+      </button>
+      <button class="btn" id="btnReview">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Bei Google bewerten
+      </button>
     </div>
   </div>
+
   <script>
     const PHONE = '491636247797';
-    document.getElementById('btnWhatsApp').addEventListener('click', () => { window.open(`https://wa.me/${PHONE}?text=Hallo%20Marius`, '_blank'); });
-    document.getElementById('btnCall').addEventListener('click', () => { window.location.href = `tel:+${PHONE}`; });
-    document.getElementById('btnInstagram').addEventListener('click', () => { window.open('https://instagram.com/58tattooatelier', '_blank'); });
-    document.getElementById('btnInstagramMmm').addEventListener('click', () => { window.open('https://www.instagram.com/mmm.tattoo/', '_blank'); });
-    document.getElementById('btnWebsite').addEventListener('click', () => { window.open('https://58tattooatelier.de', '_blank'); });
-        if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js', { scope: '/' }).catch(err => console.log('SW:', err)); }
-    document.getElementById('btnReview').addEventListener('click', () => { window.open('https://www.google.com/search?q=58+tattooatelier', '_blank'); });
+
+    document.getElementById('btnVCard').addEventListener('click', () => {
+      const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:58 Tattooatelier
+TEL:+${PHONE}
+EMAIL:info@58tattooatelier.de
+ORG:58 Tattooatelier
+URL:https://58tattooatelier.de
+END:VCARD`;
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '58-tattooatelier.vcf';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('btnWhatsApp').addEventListener('click', () => {
+      const msg = encodeURIComponent('Hallo Marius, ich interessiere mich für ein Tattoo!');
+      window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank');
+    });
+
+    document.getElementById('btnCall').addEventListener('click', () => {
+      window.location.href = `tel:+${PHONE}`;
+    });
+
+    document.getElementById('btnInstagram').addEventListener('click', () => {
+      window.open('https://instagram.com/58tattooatelier', '_blank');
+    });
+
+    document.getElementById('btnInstagramMmm').addEventListener('click', () => {
+      window.open('https://www.instagram.com/mmm.tattoo/', '_blank');
+    });
+
+    document.getElementById('btnWebsite').addEventListener('click', () => {
+      window.open('https://58tattooatelier.de', '_blank');
+    });
+
+    document.getElementById('btnReview').addEventListener('click', () => {
+      window.open('https://www.google.com/search?q=58+tattooatelier', '_blank');
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../sw.js', { scope: '/' }).catch(err => console.log('SW:', err));
+    }
   </script>
 </body>
 </html>
