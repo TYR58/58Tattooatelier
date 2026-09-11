@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>58 Tattooatelier – Kontakt</title>
   <link rel="icon" href="../assets/logo.png">
   <style>
@@ -10,7 +13,7 @@
     :root { --gold: #c9a24b; --gold-hi: #f4e2a6; --bone: #ece6da; --pit: #0a0e0c; }
     html, body { height: 100%; }
     body {
-      background: url('../assets/bg-carbon.jpg') center/cover no-repeat fixed;
+      background: url('../assets/bg-carbon.jpg?t=1789152904') center/cover no-repeat fixed;
       background-color: var(--pit);
       color: var(--bone);
       font-family: 'Inter', system-ui, sans-serif;
@@ -36,7 +39,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="../assets/58-logo.png" alt="58 Tattooatelier" class="logo" id="logoBtn">
+    <img src="../assets/58-logo.png?t=1789152904" alt="58 Tattooatelier" class="logo" id="logoBtn">
     <div class="buttons">
       <button class="btn" id="btnVCard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 11h.01M8 15h8"/></svg>
@@ -120,7 +123,7 @@ END:VCARD`;
     });
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('../sw.js', { scope: '/' }).catch(err => console.log('SW:', err));
+      navigator.serviceWorker.register('../sw.js?t=1789152904', { scope: '/' }).catch(err => console.log('SW:', err));
     }
   </script>
 </body>
