@@ -1,0 +1,39 @@
+58 TATTOOATELIER – NEUE GALERIE-BILDER
+=======================================
+20 Bilder, alle 1400px breit, fürs Web optimiert (gesamt 3,9 MB statt 9,4 MB)
+
+DATEINAME                          STIL           ALT-TEXT / BESCHREIBUNG
+---------------------------------------------------------------------------------------
+01-madonna-oberarm.jpg             Realistic      Madonna-Portrait am Oberarm
+02-sleeve-madonna-clown.jpg        Realistic      Komplett-Sleeve: Madonna und Clown
+03-drache-koi-sleeve.jpg           Japanese       Drache und Koi, Schulter und Oberarm
+04-koi-rot.jpg                     Japanese       Koi in Rot am Unterarm
+05-koi-rot-detail.jpg              Japanese       Koi in Rot, Detailansicht
+06-frau-uhr-unterarm.jpg           Realistic      Frau mit Uhr, Unterarm
+07-frau-uhr-detail.jpg             Realistic      Frau mit Uhr, zweite Ansicht
+08-sleeve-totenkopf-rot.jpg        Realistic      Unterarm-Sleeve mit roten Akzenten
+09-scream-oberarm.jpg              Realistic      Scream-Maske am Oberarm
+10-hund-portrait.jpg               Realistic      Hunde-Portrait am Unterarm
+11-hund-portrait-detail.jpg        Realistic      Hunde-Portrait, Nahaufnahme
+12-kreuz-oberarm.jpg               Blackwork      Kreuz mit Strahlenkranz
+13-einigkeit-recht-freiheit.jpg    Lettering      Lettering: Einigkeit Recht und Freiheit
+14-heimat-stolz.jpg                Lettering      Lettering: Heimat Stolz, Oberschenkel
+15-bein-sleeve-clowns.jpg          Chicano        Bein-Sleeve mit Clown-Motiven
+16-bein-sleeve-komplett.jpg        Chicano        Bein-Sleeve, Gesamtansicht
+17-bein-sleeve-studio.jpg          Chicano        Bein-Sleeve im Studio
+18-studio-sleeve.jpg               Realistic      Fertiger Sleeve im Studio
+19-studio-sleeve-2.jpg             Realistic      Fertiger Sleeve, Seitenansicht
+20-schwert-rosen-coverup.jpg       Cover-Up       Cover-Up: Schwert mit Rosen (in Arbeit)
+
+
+HINWEISE
+--------
+* Bilder 04 + 05 zeigen dasselbe Koi-Tattoo aus zwei Winkeln
+* Bilder 06 + 07 zeigen dasselbe Motiv (Frau mit Uhr) aus zwei Winkeln
+* Bilder 10 + 11 zeigen dasselbe Hunde-Portrait
+* Bilder 15, 16, 17 zeigen dasselbe Bein-Sleeve
+  -> Bei Bedarf jeweils nur eines davon verwenden
+
+* Bild 20 (Schwert mit Rosen) zeigt ein Cover-Up WAEHREND der Arbeit
+  (Stencil-Vorzeichnung oben noch sichtbar) -> passt evtl. besser in die
+  Cover-Up-Sektion als in die normale Galerie
